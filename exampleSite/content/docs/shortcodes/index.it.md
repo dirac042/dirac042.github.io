@@ -135,7 +135,7 @@ Call to action
 **Example 1:** 16:9 aspect ratio and verbose list of images
 
 ```md
-{{</* carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg, gallery/03.jpg, gallery/01.jpg, gallery/02.jpg, gallery/04.jpg}" */>}}
+{{< carousel images="https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg, gallery/03.jpg, gallery/01.jpg, gallery/02.jpg, gallery/04.jpg" >}}
 ```
 
 
@@ -143,7 +143,7 @@ Call to action
 **Example 2:** 21:9 aspect ratio and regex-ed list of images
 
 ```md
-{{</* carousel images="gallery/*" aspectRatio="21-9" interval="2500" */>}}
+{{< carousel images="gallery/*" aspectRatio="21-9" interval="2500" >}}
 ```
 
 
