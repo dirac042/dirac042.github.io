@@ -45,3 +45,7 @@ categoryId = 'YOUR_GISCUS_CATEGORY_ID'
 mapping = 'pathname'
 theme = 'light'
 lang = 'zh-CN'
+
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
