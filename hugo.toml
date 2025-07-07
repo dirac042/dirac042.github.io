@@ -43,7 +43,7 @@ subtitle = "TestTestTestTest"
 
 [languages.en.params.logo]
 logoText = "dirac042"
-logoHomeLink = "/"
+logoHomeLink = "/logo_dark.gif"
 # or
 #
 # path = "/img/your-example-logo.svg"
