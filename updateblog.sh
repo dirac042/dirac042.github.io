@@ -10,7 +10,7 @@ sourcePath="/Users/dirac042/Documents/dirac042/POSTS"
 destinationPath="/Users/dirac042/Desktop/dirac042/content/posts/POSTS"
 
 # Set GitHub Repo
-myrepo="reponame"
+myrepo="dirac042"
 
 # Check for required commands
 for cmd in git rsync python3 hugo; do
