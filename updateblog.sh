@@ -7,7 +7,7 @@ cd "$SCRIPT_DIR"
 
 # Set variables for Obsidian to Hugo copy
 sourcePath="/Users/dirac042/Documents/dirac042/POSTS"
-destinationPath="/Users/dirac042/Desktop/dirac042/content/posts"
+destinationPath="/Users/dirac042/Desktop/dirac042/content/POSTS"
 
 # Set GitHub Repo
 myrepo="dirac042"
