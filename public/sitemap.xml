@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://dirac042.github.io/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://dirac042.github.io/posts/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://dirac042.github.io/tags/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/test1/</loc>
+    <loc>https://dirac042.github.io/tags/test1/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/test2/</loc>
+    <loc>https://dirac042.github.io/tags/test2/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/the-infamous-japan-univ.-math-problems/</loc>
+    <loc>https://dirac042.github.io/posts/the-infamous-japan-univ.-math-problems/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/test/</loc>
+    <loc>https://dirac042.github.io/posts/test/</loc>
     <lastmod>2024-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://dirac042.github.io/categories/</loc>
   </url>
 </urlset>

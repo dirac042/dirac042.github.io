@@ -1,0 +1,428 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#fbfbfb"
+  lang="en-US"
+  dir="rtl"
+><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>The &#39;Infamous&#39; Japan Univ. Math Problems - dirac042 Blog</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="
+
+ 1999년 도쿄대학 문이과 공통 전기 제1문
+!
+(1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.
+(2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+
+
+ 2003년 도쿄대학 이과 전기 제6문
+!
+원주율이 3.05보다 크다는 것을 증명하라.
+
+
+ 2016년 교토대학 이과 제2문
+!
+소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+
+
+ 2020년 교토대학 문이과 공통 제5문
+!
+가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오." />
+  <meta name="author" content="dirac042" /><link rel="preload stylesheet" as="style" href="https://dirac042.github.io/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="https://dirac042.github.io/theme.svg" />
+
+  <link rel="preload" as="image" href="GRAVATAR_CDN_LINK6fd8df4abe41f17fd8e2dd7d97b5cc8c?s=160&amp;d=identicon" />
+
+  <link rel="preload" as="image" href="https://dirac042.github.io/github.svg" /><link rel="preload" as="image" href="https://dirac042.github.io/rss.svg" />
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script><script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+
+  
+  <link
+    rel="icon"
+    href="https://dirac042.github.io/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://dirac042.github.io/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.147.9">
+  <meta itemprop="name" content="The &#39;Infamous&#39; Japan Univ. Math Problems">
+  <meta itemprop="description" content="1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.
+2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.">
+  <meta itemprop="datePublished" content="2025-07-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="410">
+  <meta itemprop="keywords" content="Test1,Test2"><meta property="og:url" content="https://dirac042.github.io/posts/the-infamous-japan-univ.-math-problems/">
+  <meta property="og:site_name" content="dirac042 Blog">
+  <meta property="og:title" content="The &#39;Infamous&#39; Japan Univ. Math Problems">
+  <meta property="og:description" content="1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.
+2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-07T00:00:00+00:00">
+    <meta property="article:tag" content="Test1">
+    <meta property="article:tag" content="Test2">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The &#39;Infamous&#39; Japan Univ. Math Problems">
+  <meta name="twitter:description" content="1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.
+2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.">
+
+  <link rel="canonical" href="https://dirac042.github.io/posts/the-infamous-japan-univ.-math-problems/" />
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="https://dirac042.github.io/"
+      >dirac042 Blog</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fbfbfb'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href=""
+        >Home</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="post/rich-content/"
+        >Archives</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href=""
+        >Links</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="about/"
+        >About</a
+      ></nav><nav
+      class="mt-12 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert"
+    >
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/dirac042"
+        target="_blank"
+        rel="me"
+      >github</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="https://dirac042.github.io/index.xml"
+        target="_blank"
+        rel="alternate"
+      >rss</a>
+    </nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">The &#39;Infamous&#39; Japan Univ. Math Problems</h1><div class="text-xs antialiased opacity-60"><time>Jul 7, 2025</time></div></header>
+
+  <section><ul>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 1999년 도쿄대학 문이과 공통 전기 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png" alt="Image Description">
+(1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.
+(2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2003년 도쿄대학 이과 전기 제6문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.40.43@2x.png" alt="Image Description">
+원주율이 3.05보다 크다는 것을 증명하라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2016년 교토대학 이과 제2문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.42.10@2x.png" alt="Image Description">
+소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2020년 교토대학 문이과 공통 제5문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.42.59@2x.png" alt="Image Description">
+가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2019년 도쿄대학 이과 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.43.51@2x.png" alt="Image Description">
+다음 정적분을 구하시오.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2006년 교토대학 후기
+!<img src="/images/CleanShot%202025-05-04%20at%2018.44.33@2x.png" alt="Image Description">
+tan 1도는 유리수인가?</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 1995년 교토대학 문과 후기 제4문 (최대 30점)
+!<img src="/images/CleanShot%202025-05-04%20at%2018.45.25@2x.png" alt="Image Description">
+자연수 n에 대하여 함수 $f(n), g(n)$울
+$f(n) =$ n을 7로 나눈 나머지
+$g(n) =$ (위의 식 참조)
+라고 정하자.
+(1) 모든 자연수 n에 대해 $f(n^7) = f(n)$임을 보여라.
+(2) 당신이 좋아하는 자연수 n을 하나 골라 $g(n)$을 구하여라.
+그 $g(n)$의 값이 이 문제 (2)에 대한 당신의 점수가 된다.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 1998년 도쿄대학 후기 이과 제3문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.06@2x.png" alt="Image Description">
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.22@2x.png" alt="Image Description">
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.39@2x.png" alt="Image Description">
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.52@2x.png" alt="Image Description"></p>
+</li>
+</ul>
+<p>흰 점 한 개만 있는 그래프가 주어져있다. 여기서 그래프는 각각의 점에 흑과 백 두 색 중 하나를 칠한 단순그래프를 뜻한다. 이 때, 다음과 같은 시행을 생각한다.</p>
+<ol>
+<li>점 v를 택해 v와 연결된 새로운 흰 점 w를 잡고, v의 색이 흰색이면 검은색으로, 검은색이면 흰색으로 반전한다. (부가)</li>
+<li>변 uv를 택해 그 위에 새로운 흰 점 w를 잡고, u와 v의 색을 반전한다. (삽입)</li>
+</ol>
+<p>(1) 주어진 그래프가 이 시행을 통해 얻을 수 있음을 입증하라.
+(2) 이 시행을 통해 흰 점으로만 이루어진 길이 n의 chain을 만들 수 있는 n의 필요충분조건은 무엇인가?</p>
+<ul>
+<li><input disabled="" type="checkbox"> 2018년 도호쿠대학 이과 제3문</li>
+</ul>
+<p>정수 a, b는 등식
+$$3^a-2^b=1$$
+를 만족시킨다고 한다.</p>
+<p>(1) a, b 모두 양수임을 보여라.
+(2) b&gt;1이라면 a는 짝수임을 보여라.
+(3) 위 등식을 만족하는 정수쌍 (a, b)를 모두 구하여라.</p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> 2009년 히토쓰바시대학 전기 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.56.25@2x.png" alt="Image Description">
+2 이상의 정수 m, n은 (위의 식)을 만족한다. m, n을 구하여라.
+(also see: Ramanujan의 택시수)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2014년 오사카대학 이과 전기 제3문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.57.22@2x.png" alt="Image Description">
+위의 식의 정수부를 구하여라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2021년 히토쓰바시대학 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.57.50@2x.png" alt="Image Description">
+1000 이하의 소수는 250개 이하임을 보여라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2021년 도쿄공업대학 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.59.35@2x.png" alt="Image Description">
+양의 정수에 관한 사건
+(*) 10진법으로 표현했을 때, 어떤 자리에도 숫자 9가 없다.
+를 생각한다. 다음 질문에 답하라.</p>
+</li>
+</ul>
+<p>(1) k를 양의 정수라고 할 때, $10^{k-1}$ 이상, $10^{k}$ 미만에서 사건 *을 만족하는 양의 정수의 개수를 $a_k$라고 하자. 이 때, $a_k$를 $k$에 관한 식으로 표현하라.</p>
+<p>(2) 양의 정수 $n$에 대해 $b_n$ = (위의 식) 이라고 하자. 이 때, 모든 양의 정수 $k$에 대해 다음 부등식이 성립함을 보여라:
+(위의 식)</p>
+<ul>
+<li><input disabled="" type="checkbox"> 도쿄공업대 2019 이과 수학
+!<img src="/images/CleanShot%202025-05-04%20at%2019.03.22@2x.png" alt="Image Description"></li>
+</ul>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.03.38@2x.png" alt="Image Description"></p>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.03.47@2x.png" alt="Image Description"></p>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.03.56@2x.png" alt="Image Description"></p>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.04.05@2x.png" alt="Image Description"></p>
+</section>
+
+  <footer class="mt-12 flex flex-wrap"><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://dirac042.github.io/tags/test1"
+      >test1</a
+    ><a
+      class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://dirac042.github.io/tags/test2"
+      >test2</a
+    ></footer><div class="mt-24" id="disqus_thread"></div>
+  <script>
+    const disqusShortname = 'YOUR_DISQUS_SHORTNAME';
+    const script = document.createElement('script');
+    script.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
+    script.setAttribute('data-timestamp', +new Date());
+    document.head.appendChild(script);
+  </script><div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: 'YOUR_GRAPH_COMMENT_ID',
+      behaviour: {
+        
+      },
+      
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script><div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="YOUR_GISCUS_REPO"
+    data-repo-id="YOUR_GISCUS_REPO_ID"
+    data-category="YOUR__GISCUS_CATEGORY"
+    data-category-id="YOUR_GISCUS_CATEGORY_ID"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script></article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025
+    <a class="link" href="https://dirac042.github.io/">dirac042 Blog</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>

@@ -1,0 +1,6 @@
+enableSearch = true
+codeLineNumbers = true
+codeMaxLines = 15
+
+[author]
+name = "Jeong Hwan, Lee"
