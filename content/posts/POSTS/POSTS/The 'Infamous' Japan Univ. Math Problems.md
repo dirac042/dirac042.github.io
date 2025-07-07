@@ -1,3 +1,11 @@
+---
+title: The 'Infamous' Japan Univ. Math Problems
+date: 2025-07-07
+draft: false
+tags:
+  - test1
+  - test2
+---
 
 * [x] 1999년 도쿄대학 문이과 공통 전기 제1문
 ![[CleanShot 2025-05-04 at 18.38.45@2x.png]]
