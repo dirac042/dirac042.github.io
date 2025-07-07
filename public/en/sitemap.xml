@@ -2,69 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dirac042.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://dirac042.github.io/ko/"
+                href="http://localhost:1313/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dirac042.github.io/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>https://dirac042.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://dirac042.github.io/ko/tags/"
+                href="http://localhost:1313/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dirac042.github.io/tags/"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
-    <loc>https://dirac042.github.io/tags/test1/</loc>
+    <loc>http://localhost:1313/tags/test1/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/tags/test2/</loc>
+    <loc>http://localhost:1313/tags/test2/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/posts/the-infamous-japan-univ.-math-problems/</loc>
+    <loc>http://localhost:1313/posts/the-infamous-japan-univ.-math-problems/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/posts/test/</loc>
+    <loc>http://localhost:1313/posts/test/</loc>
     <lastmod>2024-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://dirac042.github.io/ko/blog/"
+                href="http://localhost:1313/ko/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dirac042.github.io/blog/"
+                href="http://localhost:1313/blog/"
                 />
   </url><url>
-    <loc>https://dirac042.github.io/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://dirac042.github.io/ko/series/"
+                href="http://localhost:1313/ko/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dirac042.github.io/series/"
+                href="http://localhost:1313/series/"
                 />
   </url>
 </urlset>

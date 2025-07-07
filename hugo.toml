@@ -38,17 +38,14 @@ keywords = ""
 copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 readOtherPosts = "Read other posts"
 
-[languages.ko]
-title = "너는 무엇이든 배울 수 있다."
-keywords = ""
-readOtherPosts = "다른 포스트 읽기"
 
 [languages.en.params]
 subtitle = "TestTestTestTest"
 
 [languages.en.params.logo]
 logoText = "dirac042"
-logoHomeLink = "/logo_dark.svg"
+logoHomeLink = "/"
+path = "/source/images/logo_dark.svg"
 # or
 #
 # path = "/img/your-example-logo.svg"

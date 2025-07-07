@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on 너는 무엇이든 배울 수 있다.</title>
-    <link>https://dirac042.github.io/ko/series/</link>
+    <link>http://localhost:1313/ko/series/</link>
     <description>Recent content in Series on 너는 무엇이든 배울 수 있다.</description>
     <generator>Hugo</generator>
     <language>ko</language>
-    <atom:link href="https://dirac042.github.io/ko/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/ko/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
