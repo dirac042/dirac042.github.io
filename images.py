@@ -3,9 +3,9 @@ import re
 import shutil
 
 # Paths
-posts_dir = "/Users/dirac042/Desktop/dirac042/content/posts/POSTS"
-attachments_dir = "/Users/dirac042/Documents/dirac042/Images/"
-static_images_dir = "/Users/dirac042/Desktop/dirac042/static/images/"
+posts_dir = "/Users/dirac042/Desktop/dirac042/content/posts"
+attachments_dir = "/Users/dirac042/Documents/dirac042/Images"
+static_images_dir = "/Users/dirac042/Desktop/dirac042/static/images"
 
 # Step 1: Process each markdown file in the posts directory
 for filename in os.listdir(posts_dir):
