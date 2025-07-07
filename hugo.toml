@@ -2,7 +2,7 @@ baseurl = "https://dirac042.github.io"
 title = "dirac042's blog"
 languageCode = "en-us"
 theme = "hello-friend-ng"
-fabicon = "/static/images/logo_dark.svg"
+
 
 [params]
 dateform = "Jan 2, 2006"
@@ -56,6 +56,3 @@ logoHomeLink = "/"
 identifier = "blog"
 name = "Blog"
 url = "/posts"
-
-[article]
-math = true
