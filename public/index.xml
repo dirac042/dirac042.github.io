@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TESTTESTTEST</title>
+      <link>/posts/posts/test/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/posts/test/</guid>
+      <description>&lt;h3 id=&#34;test1&#34;&gt;Test1&lt;/h3&gt;&#xA;&lt;p&gt;!&lt;img src=&#34;/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

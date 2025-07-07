@@ -1,0 +1,47 @@
+[services]
+[services.disqus]
+shortname = 'YOUR_DISQUS_SHORTNAME' # use disqus comments
+
+[params]
+# color style
+color = 'gray' # linen, wheat, gray, light
+
+# header social icons
+#twitter = 'YOUR_TWITTER_ID'     # twitter.com/YOUR_TWITTER_ID
+github = 'dirac042' # github.com/YOUR_GITHUB_ID
+#instagram = 'YOUR_INSTAGRAM_ID' # instagram.com/YOUR_INSTAGRAM_ID
+#linkedin = 'YOUR_LINKEDIN_ID'   # linkedin.com/in/YOUR_LINKEDIN_ID
+#mastodon = 'YOUR_MASTODON_LINK' # e.g. 'https://mastodon.instance/@xxx'
+# threads = '@YOUR_THREADS_ID'    # threads.net/@YOUR_THREADS_ID
+# bluesky = 'YOUR_BLUESKY_ID'     # https://bsky.app/profile/YOUR_BLUESKY_ID
+rss = true # show rss icon
+
+# home page profile
+avatar = 'GRAVATAR_EMAIL'               # gravatar email or image url
+name = 'dirac042'
+bio = 'UNIST21: CSE + SBA Double Major'
+
+
+# misc
+disableHLJS = true                       # disable highlight.js
+disablePostNavigation = true             # disable post navigation
+monoDarkIcon = true                      # show monochrome dark mode icon
+gravatarCdn = 'GRAVATAR_CDN_LINK'        # e.g. 'https://cdn.v2ex.com/gravatar/'
+math = true                              # enable KaTeX math typesetting globally
+localKatex = false                       # use local KaTeX js/css instead of CDN
+graphCommentId = "YOUR_GRAPH_COMMENT_ID" # use graph comment (disqus alternative)
+favicon = "favicon.ico"                  # customize the default favicon
+appleTouchIcon = "apple-touch-icon.png"  # customize the default Apple touch icon
+
+# RTL supprot
+direction = "rtl" # RTL support for Right-to-left languages
+
+# giscus
+[params.giscus]
+repo = 'YOUR_GISCUS_REPO'              # see https://giscus.app for more details
+repoId = 'YOUR_GISCUS_REPO_ID'
+category = 'YOUR__GISCUS_CATEGORY'
+categoryId = 'YOUR_GISCUS_CATEGORY_ID'
+mapping = 'pathname'
+theme = 'light'
+lang = 'zh-CN'
