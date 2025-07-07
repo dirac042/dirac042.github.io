@@ -8,32 +8,32 @@ tags:
 ---
 
 * [x] 1999년 도쿄대학 문이과 공통 전기 제1문
-![[CleanShot 2025-05-04 at 18.38.45@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png)
 (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.
 (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
 
 * [ ] 2003년 도쿄대학 이과 전기 제6문
-![[CleanShot 2025-05-04 at 18.40.43@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.40.43@2x.png)
 원주율이 3.05보다 크다는 것을 증명하라.
 
 * [ ] 2016년 교토대학 이과 제2문
-![[CleanShot 2025-05-04 at 18.42.10@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.42.10@2x.png)
 소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.
 
 * [ ] 2020년 교토대학 문이과 공통 제5문
-![[CleanShot 2025-05-04 at 18.42.59@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.42.59@2x.png)
 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.
 
 * [ ] 2019년 도쿄대학 이과 제1문
-![[CleanShot 2025-05-04 at 18.43.51@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.43.51@2x.png)
 다음 정적분을 구하시오.
 
 * [ ] 2006년 교토대학 후기
-![[CleanShot 2025-05-04 at 18.44.33@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.44.33@2x.png)
 tan 1도는 유리수인가?
 
 * [ ] 1995년 교토대학 문과 후기 제4문 (최대 30점)
-![[CleanShot 2025-05-04 at 18.45.25@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.45.25@2x.png)
 자연수 n에 대하여 함수 $f(n), g(n)$울 
 	$f(n) =$ n을 7로 나눈 나머지
 	$g(n) =$ (위의 식 참조)
@@ -43,10 +43,10 @@ tan 1도는 유리수인가?
 그 $g(n)$의 값이 이 문제 (2)에 대한 당신의 점수가 된다.
 
 * [ ] 1998년 도쿄대학 후기 이과 제3문
-![[CleanShot 2025-05-04 at 18.49.06@2x.png]]
-![[CleanShot 2025-05-04 at 18.49.22@2x.png]]
-![[CleanShot 2025-05-04 at 18.49.39@2x.png]]
-![[CleanShot 2025-05-04 at 18.49.52@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.49.06@2x.png)
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.49.22@2x.png)
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.49.39@2x.png)
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.49.52@2x.png)
 
 흰 점 한 개만 있는 그래프가 주어져있다. 여기서 그래프는 각각의 점에 흑과 백 두 색 중 하나를 칠한 단순그래프를 뜻한다. 이 때, 다음과 같은 시행을 생각한다.
 
@@ -67,20 +67,20 @@ $$3^a-2^b=1$$
 (3) 위 등식을 만족하는 정수쌍 (a, b)를 모두 구하여라.
 
 * [ ] 2009년 히토쓰바시대학 전기 제1문
-![[CleanShot 2025-05-04 at 18.56.25@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.56.25@2x.png)
 2 이상의 정수 m, n은 (위의 식)을 만족한다. m, n을 구하여라.
 (also see: Ramanujan의 택시수)
 
 * [ ] 2014년 오사카대학 이과 전기 제3문
-![[CleanShot 2025-05-04 at 18.57.22@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.57.22@2x.png)
 위의 식의 정수부를 구하여라.
 
 * [ ] 2021년 히토쓰바시대학 제1문
-![[CleanShot 2025-05-04 at 18.57.50@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.57.50@2x.png)
 1000 이하의 소수는 250개 이하임을 보여라.
 
 * [ ] 2021년 도쿄공업대학 제1문
-![[CleanShot 2025-05-04 at 18.59.35@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2018.59.35@2x.png)
 양의 정수에 관한 사건
 	(\*) 10진법으로 표현했을 때, 어떤 자리에도 숫자 9가 없다.
 를 생각한다. 다음 질문에 답하라.
@@ -91,13 +91,13 @@ $$3^a-2^b=1$$
 (위의 식)
 
 * [ ] 도쿄공업대 2019 이과 수학
-![[CleanShot 2025-05-04 at 19.03.22@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2019.03.22@2x.png)
 
-![[CleanShot 2025-05-04 at 19.03.38@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2019.03.38@2x.png)
 
-![[CleanShot 2025-05-04 at 19.03.47@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2019.03.47@2x.png)
 
-![[CleanShot 2025-05-04 at 19.03.56@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2019.03.56@2x.png)
 
-![[CleanShot 2025-05-04 at 19.04.05@2x.png]]
+!![Image Description](/images/CleanShot%202025-05-04%20at%2019.04.05@2x.png)
 

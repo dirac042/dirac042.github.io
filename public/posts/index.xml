@@ -10,17 +10,17 @@
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The &#39;Infamous&#39; Japan Univ. Math Problems</title>
-      <link>/posts/posts/the-infamous-japan-univ.-math-problems/</link>
+      <link>/posts/the-infamous-japan-univ.-math-problems/</link>
       <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/posts/the-infamous-japan-univ.-math-problems/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1999년 도쿄대학 문이과 공통 전기 제1문&#xA;![[CleanShot 2025-05-04 at 18.38.45@2x.png]]&#xA;(1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.&#xA;(2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2003년 도쿄대학 이과 전기 제6문&#xA;![[CleanShot 2025-05-04 at 18.40.43@2x.png]]&#xA;원주율이 3.05보다 크다는 것을 증명하라.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2016년 교토대학 이과 제2문&#xA;![[CleanShot 2025-05-04 at 18.42.10@2x.png]]&#xA;소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2020년 교토대학 문이과 공통 제5문&#xA;![[CleanShot 2025-05-04 at 18.42.59@2x.png]]&#xA;가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.&lt;/p&gt;</description>
+      <guid>/posts/the-infamous-japan-univ.-math-problems/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1999년 도쿄대학 문이과 공통 전기 제1문&#xA;!&lt;img src=&#34;/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;&#xA;(1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.&#xA;(2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2003년 도쿄대학 이과 전기 제6문&#xA;!&lt;img src=&#34;/images/CleanShot%202025-05-04%20at%2018.40.43@2x.png&#34; alt=&#34;Image Description&#34;&gt;&#xA;원주율이 3.05보다 크다는 것을 증명하라.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2016년 교토대학 이과 제2문&#xA;!&lt;img src=&#34;/images/CleanShot%202025-05-04%20at%2018.42.10@2x.png&#34; alt=&#34;Image Description&#34;&gt;&#xA;소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2020년 교토대학 문이과 공통 제5문&#xA;!&lt;img src=&#34;/images/CleanShot%202025-05-04%20at%2018.42.59@2x.png&#34; alt=&#34;Image Description&#34;&gt;&#xA;가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TESTTESTTEST</title>
-      <link>/posts/posts/test/</link>
+      <link>/posts/test/</link>
       <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>/posts/posts/test/</guid>
-      <description>&lt;h3 id=&#34;test1&#34;&gt;Test1&lt;/h3&gt;&#xA;&lt;p&gt;![[CleanShot 2025-05-04 at 18.38.45@2x.png]]&lt;/p&gt;</description>
+      <guid>/posts/test/</guid>
+      <description>&lt;h3 id=&#34;test1&#34;&gt;Test1&lt;/h3&gt;&#xA;&lt;p&gt;!&lt;img src=&#34;/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
