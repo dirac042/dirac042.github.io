@@ -6,10 +6,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Set paths
-sourceEn="/Users/dirac042/Documents/dirac042/POSTS/en/"
-sourceKo="/Users/dirac042/Documents/dirac042/POSTS/ko/"
-destEn="/Users/dirac042/Desktop/dirac042/content/en/posts/"
-destKo="/Users/dirac042/Desktop/dirac042/content/ko/posts/"
+sourceEn="/Users/dirac042/Documents/dirac042/POSTS/"
+destEn="/Users/dirac042/Desktop/dirac042/content/posts"
 
 # GitHub repo
 myrepo="https://github.com/dirac042/dirac042.github.io.git"
@@ -37,19 +35,15 @@ fi
 
 # Sync Obsidian to Hugo
 echo "Syncing posts..."
-for pair in "$sourceEn:$destEn" "$sourceKo:$destKo"; do
-  src="${pair%%:*}"
-  dst="${pair##*:}"
-  if [ ! -d "$src" ]; then
-    echo "Source path does not exist: $src"
-    exit 1
-  fi
-  if [ ! -d "$dst" ]; then
-    echo "Destination path does not exist: $dst"
-    exit 1
-  fi
-  rsync -av --delete "$src" "$dst"
-done
+if [ ! -d "$sourceEn" ]; then
+  echo "Source path does not exist: $sourceEn"
+  exit 1
+fi
+if [ ! -d "$destEn" ]; then
+  echo "Destination path does not exist: $destEn"
+  exit 1
+fi
+rsync -av --delete "$sourceEn" "$destEn"
 
 # Process image links
 echo "Processing image links in Markdown files..."

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dirac042.github.io/en/en/posts/unist-stem-program---unist-x-ufl/</loc>
+    <loc>https://dirac042.github.io/en/posts/en/unist-stem-program---unist-x-ufl/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dirac042.github.io/en/</loc>
@@ -18,7 +18,7 @@
                 href="https://dirac042.github.io/en/"
                 />
   </url><url>
-    <loc>https://dirac042.github.io/en/en/</loc>
+    <loc>https://dirac042.github.io/en/posts/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dirac042.github.io/en/tags/stem/</loc>
@@ -43,14 +43,12 @@
     <loc>https://dirac042.github.io/en/tags/maintenance/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/en/en/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
+    <loc>https://dirac042.github.io/en/posts/en/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/en/en/posts/asdasdasdasd/</loc>
+    <loc>https://dirac042.github.io/en/posts/en/asdasdasdasd/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/en/ko/posts/untitled/</loc>
-  </url><url>
-    <loc>https://dirac042.github.io/en/ko/</loc>
+    <loc>https://dirac042.github.io/en/posts/ko/untitled/</loc>
   </url>
 </urlset>
