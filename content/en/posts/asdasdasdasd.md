@@ -1,15 +1,9 @@
----
-title: title
-date: 2025-01-01
-draft: false
-tags:
-  - tag1
-  - tag2
-lang: en
----
++++
+title = "테스트 글"
+date = "2023-01-01"
+draft = false
+lang = "en"
++++
 
-
-
-
-
+이건 테스트입니다.
 

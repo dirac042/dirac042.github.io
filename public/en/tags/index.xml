@@ -29,19 +29,5 @@
       <guid>https://dirac042.github.io/en/tags/maintenance/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Tag1</title>
-      <link>https://dirac042.github.io/en/tags/tag1/</link>
-      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://dirac042.github.io/en/tags/tag1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tag2</title>
-      <link>https://dirac042.github.io/en/tags/tag2/</link>
-      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://dirac042.github.io/en/tags/tag2/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
