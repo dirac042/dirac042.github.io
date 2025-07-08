@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>POSTSes on Anything can be Learned.</title>
-        <link>https://dirac042.github.io/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>Recent content in POSTSes on Anything can be Learned.</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
         <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
-        <atom:link href="https://dirac042.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Making my Personal Blog</title>
-            <link>https://dirac042.github.io/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+            <link>http://localhost:1313/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
             <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
             
-            <guid>https://dirac042.github.io/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+            <guid>http://localhost:1313/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
             <description>&lt;h3 id=&#34;진행상황&#34;&gt;진행상황&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; HUGO 사용법 배우기
@@ -58,30 +58,30 @@
         
         <item>
             <title>The &#39;Infamous&#39; Japan Univ. Math Problems</title>
-            <link>https://dirac042.github.io/posts/the-infamous-japan-univ.-math-problems/</link>
+            <link>http://localhost:1313/posts/the-infamous-japan-univ.-math-problems/</link>
             <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
             
-            <guid>https://dirac042.github.io/posts/the-infamous-japan-univ.-math-problems/</guid>
+            <guid>http://localhost:1313/posts/the-infamous-japan-univ.-math-problems/</guid>
             <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 1999년 도쿄대학 문이과 공통 전기 제1문
-!&lt;img src=&#34;https://dirac042.github.io/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;
+!&lt;img src=&#34;http://localhost:1313/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;
 (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.
 (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2003년 도쿄대학 이과 전기 제6문
-!&lt;img src=&#34;https://dirac042.github.io/images/CleanShot%202025-05-04%20at%2018.40.43@2x.png&#34; alt=&#34;Image Description&#34;&gt;
+!&lt;img src=&#34;http://localhost:1313/images/CleanShot%202025-05-04%20at%2018.40.43@2x.png&#34; alt=&#34;Image Description&#34;&gt;
 원주율이 3.05보다 크다는 것을 증명하라.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2016년 교토대학 이과 제2문
-!&lt;img src=&#34;https://dirac042.github.io/images/CleanShot%202025-05-04%20at%2018.42.10@2x.png&#34; alt=&#34;Image Description&#34;&gt;
+!&lt;img src=&#34;http://localhost:1313/images/CleanShot%202025-05-04%20at%2018.42.10@2x.png&#34; alt=&#34;Image Description&#34;&gt;
 소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 2020년 교토대학 문이과 공통 제5문
-!&lt;img src=&#34;https://dirac042.github.io/images/CleanShot%202025-05-04%20at%2018.42.59@2x.png&#34; alt=&#34;Image Description&#34;&gt;
+!&lt;img src=&#34;http://localhost:1313/images/CleanShot%202025-05-04%20at%2018.42.59@2x.png&#34; alt=&#34;Image Description&#34;&gt;
 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<ul>
 <li>
@@ -191,12 +191,12 @@ $$3^a-2^b=1$$
         
         <item>
             <title>TESTTESTTEST</title>
-            <link>https://dirac042.github.io/posts/test/</link>
+            <link>http://localhost:1313/posts/test/</link>
             <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
             
-            <guid>https://dirac042.github.io/posts/test/</guid>
+            <guid>http://localhost:1313/posts/test/</guid>
             <description>&lt;h3 id=&#34;test1&#34;&gt;Test1&lt;/h3&gt;
-&lt;p&gt;!&lt;img src=&#34;https://dirac042.github.io/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;!&lt;img src=&#34;http://localhost:1313/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
             <content type="html"><![CDATA[<h3 id="test1">Test1</h3>
 <p>!<img src="/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png" alt="Image Description"></p>
 ]]></content>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="robots" content="index, follow"><meta name="author" content="dirac042">
+<meta name="description" content="">
+<link rel="author" type="text/plain" href="/humans.txt">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#494f5c">
+<meta name="msapplication-TileColor" content="#494f5c">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#494f5c">
+
+  <meta itemprop="name" content="The &#39;Infamous&#39; Japan Univ. Math Problems">
+  <meta itemprop="description" content="1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.
+2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.">
+  <meta itemprop="datePublished" content="2025-07-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="410">
+  <meta itemprop="keywords" content="Test1,Test2"><meta property="og:url" content="http://localhost:1313/en/posts/the-infamous-japan-univ.-math-problems/">
+  <meta property="og:site_name" content="dirac042&#39;s Blog">
+  <meta property="og:title" content="The &#39;Infamous&#39; Japan Univ. Math Problems">
+  <meta property="og:description" content="1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.
+2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-07T00:00:00+00:00">
+    <meta property="article:tag" content="Test1">
+    <meta property="article:tag" content="Test2">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The &#39;Infamous&#39; Japan Univ. Math Problems">
+  <meta name="twitter:description" content="1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.
+2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.
+2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q&#43;q^p$로 표현되는 소수를 모두 구하여라.
+2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The 'Infamous' Japan Univ. Math Problems",
+    "name": "The \u0027Infamous\u0027 Japan Univ. Math Problems",
+    "description": " 1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\\theta$에 대해서 $\\sin \\theta, \\cos \\theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\\alpha, \\beta$에 대해 삼각함수의 덧셈정리를 증명하라.\n2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.\n2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.\n2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.\n",
+    "keywords": ["test1", "test2"],
+    "articleBody": " 1999년 도쿄대학 문이과 공통 전기 제1문 ! (1) 일반각 $\\theta$에 대해서 $\\sin \\theta, \\cos \\theta$의 정의를 기술하라. (2) (1)에서 정의한 기술을 바탕으로 일반각 $\\alpha, \\beta$에 대해 삼각함수의 덧셈정리를 증명하라.\n2003년 도쿄대학 이과 전기 제6문 ! 원주율이 3.05보다 크다는 것을 증명하라.\n2016년 교토대학 이과 제2문 ! 소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.\n2020년 교토대학 문이과 공통 제5문 ! 가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.\n2019년 도쿄대학 이과 제1문 ! 다음 정적분을 구하시오.\n2006년 교토대학 후기 ! tan 1도는 유리수인가?\n1995년 교토대학 문과 후기 제4문 (최대 30점) ! 자연수 n에 대하여 함수 $f(n), g(n)$울 $f(n) =$ n을 7로 나눈 나머지 $g(n) =$ (위의 식 참조) 라고 정하자. (1) 모든 자연수 n에 대해 $f(n^7) = f(n)$임을 보여라. (2) 당신이 좋아하는 자연수 n을 하나 골라 $g(n)$을 구하여라. 그 $g(n)$의 값이 이 문제 (2)에 대한 당신의 점수가 된다.\n1998년 도쿄대학 후기 이과 제3문 ! ! ! !\n흰 점 한 개만 있는 그래프가 주어져있다. 여기서 그래프는 각각의 점에 흑과 백 두 색 중 하나를 칠한 단순그래프를 뜻한다. 이 때, 다음과 같은 시행을 생각한다.\n점 v를 택해 v와 연결된 새로운 흰 점 w를 잡고, v의 색이 흰색이면 검은색으로, 검은색이면 흰색으로 반전한다. (부가) 변 uv를 택해 그 위에 새로운 흰 점 w를 잡고, u와 v의 색을 반전한다. (삽입) (1) 주어진 그래프가 이 시행을 통해 얻을 수 있음을 입증하라. (2) 이 시행을 통해 흰 점으로만 이루어진 길이 n의 chain을 만들 수 있는 n의 필요충분조건은 무엇인가?\n2018년 도호쿠대학 이과 제3문 정수 a, b는 등식 $$3^a-2^b=1$$ 를 만족시킨다고 한다.\n(1) a, b 모두 양수임을 보여라. (2) b\u003e1이라면 a는 짝수임을 보여라. (3) 위 등식을 만족하는 정수쌍 (a, b)를 모두 구하여라.\n2009년 히토쓰바시대학 전기 제1문 ! 2 이상의 정수 m, n은 (위의 식)을 만족한다. m, n을 구하여라. (also see: Ramanujan의 택시수)\n2014년 오사카대학 이과 전기 제3문 ! 위의 식의 정수부를 구하여라.\n2021년 히토쓰바시대학 제1문 ! 1000 이하의 소수는 250개 이하임을 보여라.\n2021년 도쿄공업대학 제1문 ! 양의 정수에 관한 사건 (*) 10진법으로 표현했을 때, 어떤 자리에도 숫자 9가 없다. 를 생각한다. 다음 질문에 답하라.\n(1) k를 양의 정수라고 할 때, $10^{k-1}$ 이상, $10^{k}$ 미만에서 사건 *을 만족하는 양의 정수의 개수를 $a_k$라고 하자. 이 때, $a_k$를 $k$에 관한 식으로 표현하라.\n(2) 양의 정수 $n$에 대해 $b_n$ = (위의 식) 이라고 하자. 이 때, 모든 양의 정수 $k$에 대해 다음 부등식이 성립함을 보여라: (위의 식)\n도쿄공업대 2019 이과 수학 ! !\n!\n!\n!\n",
+    "wordCount" : "410",
+    "inLanguage": "en",
+    "datePublished": "2025-07-07T00:00:00Z",
+    "dateModified": "2025-07-07T00:00:00Z",
+    "author":{
+        "@type": "Person",
+        "name": "dirac042",
+        "url": ""
+        },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/en/posts/the-infamous-japan-univ.-math-problems/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "dirac042's Blog",
+      "description": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://localhost:1313/favicon.ico"
+      }
+    }
+}
+</script><title>The &#39;Infamous&#39; Japan Univ. Math Problems</title><link rel="stylesheet dns-prefetch preconnect preload prefetch" as="style" media="screen" href="http://localhost:1313/css/style.min.db61f3410d6ca63e91c7b216aba00255888d073ee11ec98eccf19dcb7b573018.css" integrity="sha256-22HzQQ1spj6Rx7IWq6ACVYiNBz7hHsmOzPGdy3tXMBg=" crossorigin="anonymous">
+	</head>
+
+<body id="page">
+<header id="site-header">
+	<div class="hdr-wrapper section-inner">
+		<div class="hdr-left">
+			<div class="site-branding">
+				<a href="http://localhost:1313/">dirac042&#39;s Blog</a>
+			</div>
+			<nav class="site-nav hide-in-mobile"><a href="http://localhost:1313/en/posts/">Posts</a><a href="http://localhost:1313/en/about-hugo/">About</a></nav>
+		</div>
+		<div class="hdr-right hdr-icons">
+			<span class="hdr-links hide-in-mobile"><a href="https://github.com/dirac042/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+   <path
+      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+   </path>
+</svg></a></span><button id="share-btn" class="hdr-btn" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+   </svg></button>
+ 
+<div id="share-links" class="animated fast">
+    
+    
+    
+    
+    <ul>
+        <li>
+            <a href="https://twitter.com/intent/tweet?hashtags=hermit2&amp;url=http%3a%2f%2flocalhost%3a1313%2fen%2fposts%2fthe-infamous-japan-univ.-math-problems%2f&amp;text=The%20%27Infamous%27%20Japan%20Univ.%20Math%20Problems" target="_blank" rel="noopener" aria-label="Share on X"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+   <path class="st0" d="m21.3 21.1 -11.4 -18.2h-7.2l11.4 18.2zm-18.6 0 7.2 -6.6m4.2 -5 7.2 -6.6" />
+</svg></a>
+        </li>
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fen%2fposts%2fthe-infamous-japan-univ.-math-problems%2f" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg></a>
+        </li>
+        <li>
+            <a href="mailto:?subject=The%20%27Infamous%27%20Japan%20Univ.%20Math%20Problems&amp;body=http%3a%2f%2flocalhost%3a1313%2fen%2fposts%2fthe-infamous-japan-univ.-math-problems%2f" target="_self" rel="noopener" aria-label="Share on Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+   <polyline points="22,6 12,13 2,6"></polyline>
+</svg></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fen%2fposts%2fthe-infamous-japan-univ.-math-problems%2f&amp;source=http%3a%2f%2flocalhost%3a1313%2f&amp;title=The%20%27Infamous%27%20Japan%20Univ.%20Math%20Problems&amp;summary=The%20%27Infamous%27%20Japan%20Univ.%20Math%20Problems%2c%20by%20dirac042%0a%0a%3cnil%3e%0a" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+   <rect x="2" y="9" width="4" height="12"></rect>
+   <circle cx="4" cy="4" r="2"></circle>
+</svg></a>
+        </li>
+        <li>
+            <a href="#" onclick="linkShare(&#34;The &#39;Infamous&#39; Japan Univ. Math Problems&#34;,&#34;http://localhost:1313/en/posts/the-infamous-japan-univ.-math-problems/&#34;,&#34;The &#39;Infamous&#39; Japan Univ. Math Problems, by dirac042\n\n\u003cnil\u003e\n&#34;); return false;" target="_self" rel="noopener" aria-label="Copy Link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+   </svg></a>
+        </li>
+    </ul>
+</div><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+   </svg></button>
+		</div>
+	</div>
+</header>
+<div id="mobile-menu" class="animated fast">
+	<ul>
+		<li><a href="http://localhost:1313/en/posts/">Posts</a></li>
+		<li><a href="http://localhost:1313/en/about-hugo/">About</a></li>
+	</ul>
+</div>
+
+	<main class="site-main section-inner animated fadeIn faster"><article class="thin">
+			<header class="post-header">
+				<div class="post-date"><span>Jul 7, 2025</span></div>
+				<h1>The &#39;Infamous&#39; Japan Univ. Math Problems</h1>
+			</header>
+			<div class="post-description"><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather">
+   <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+   <line x1="16" y1="8" x2="2" y2="22"></line>
+   <line x1="17.5" y1="15" x2="9" y2="15"></line>
+</svg><a href="" target="_blank">dirac042</a></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+      <line x1="7" y1="7" x2="7" y2="7"></line>
+   </svg><span class="tag"><a href="http://localhost:1313/en/tags/test1">test1</a></span><span class="tag"><a href="http://localhost:1313/en/tags/test2">test2</a></span></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="16" y1="13" x2="8" y2="13"></line>
+      <line x1="16" y1="17" x2="8" y2="17"></line>
+      <polyline points="10 9 9 9 8 9"></polyline>
+   </svg>410&nbsp  CHANGE ME READ TIME1 Minute, 51 Seconds</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+      <line x1="16" y1="2" x2="16" y2="6"></line>
+      <line x1="8" y1="2" x2="8" y2="6"></line>
+      <line x1="3" y1="10" x2="21" y2="10"></line>
+   </svg>2025-07-07 09:00 &#43;0900
+</p></div>
+			<hr class="post-end">
+			<div class="content">
+				 <ul>
+<li>
+<p><input checked="" disabled="" type="checkbox"> 1999년 도쿄대학 문이과 공통 전기 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.38.45@2x.png" alt="Image Description">
+(1) 일반각 $\theta$에 대해서 $\sin \theta, \cos \theta$의 정의를 기술하라.
+(2) (1)에서 정의한 기술을 바탕으로 일반각 $\alpha, \beta$에 대해 삼각함수의 덧셈정리를 증명하라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2003년 도쿄대학 이과 전기 제6문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.40.43@2x.png" alt="Image Description">
+원주율이 3.05보다 크다는 것을 증명하라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2016년 교토대학 이과 제2문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.42.10@2x.png" alt="Image Description">
+소수 p, q에 대해서 $p^q+q^p$로 표현되는 소수를 모두 구하여라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2020년 교토대학 문이과 공통 제5문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.42.59@2x.png" alt="Image Description">
+가로 4칸, 세로 4칸으로 이루어진 격자 각 칸에 1, 2, 3, 4의 숫자를 채워나간다. 이 칸의 가로줄을 행, 세로줄을 열이라고 하자. 어느 행이나 열이든지 같은 숫자가 한 번밖에 나타나지 않도록 하는 경우의 수를 구하시오.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2019년 도쿄대학 이과 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.43.51@2x.png" alt="Image Description">
+다음 정적분을 구하시오.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2006년 교토대학 후기
+!<img src="/images/CleanShot%202025-05-04%20at%2018.44.33@2x.png" alt="Image Description">
+tan 1도는 유리수인가?</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 1995년 교토대학 문과 후기 제4문 (최대 30점)
+!<img src="/images/CleanShot%202025-05-04%20at%2018.45.25@2x.png" alt="Image Description">
+자연수 n에 대하여 함수 $f(n), g(n)$울
+$f(n) =$ n을 7로 나눈 나머지
+$g(n) =$ (위의 식 참조)
+라고 정하자.
+(1) 모든 자연수 n에 대해 $f(n^7) = f(n)$임을 보여라.
+(2) 당신이 좋아하는 자연수 n을 하나 골라 $g(n)$을 구하여라.
+그 $g(n)$의 값이 이 문제 (2)에 대한 당신의 점수가 된다.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 1998년 도쿄대학 후기 이과 제3문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.06@2x.png" alt="Image Description">
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.22@2x.png" alt="Image Description">
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.39@2x.png" alt="Image Description">
+!<img src="/images/CleanShot%202025-05-04%20at%2018.49.52@2x.png" alt="Image Description"></p>
+</li>
+</ul>
+<p>흰 점 한 개만 있는 그래프가 주어져있다. 여기서 그래프는 각각의 점에 흑과 백 두 색 중 하나를 칠한 단순그래프를 뜻한다. 이 때, 다음과 같은 시행을 생각한다.</p>
+<ol>
+<li>점 v를 택해 v와 연결된 새로운 흰 점 w를 잡고, v의 색이 흰색이면 검은색으로, 검은색이면 흰색으로 반전한다. (부가)</li>
+<li>변 uv를 택해 그 위에 새로운 흰 점 w를 잡고, u와 v의 색을 반전한다. (삽입)</li>
+</ol>
+<p>(1) 주어진 그래프가 이 시행을 통해 얻을 수 있음을 입증하라.
+(2) 이 시행을 통해 흰 점으로만 이루어진 길이 n의 chain을 만들 수 있는 n의 필요충분조건은 무엇인가?</p>
+<ul>
+<li><input disabled="" type="checkbox"> 2018년 도호쿠대학 이과 제3문</li>
+</ul>
+<p>정수 a, b는 등식
+$$3^a-2^b=1$$
+를 만족시킨다고 한다.</p>
+<p>(1) a, b 모두 양수임을 보여라.
+(2) b&gt;1이라면 a는 짝수임을 보여라.
+(3) 위 등식을 만족하는 정수쌍 (a, b)를 모두 구하여라.</p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> 2009년 히토쓰바시대학 전기 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.56.25@2x.png" alt="Image Description">
+2 이상의 정수 m, n은 (위의 식)을 만족한다. m, n을 구하여라.
+(also see: Ramanujan의 택시수)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2014년 오사카대학 이과 전기 제3문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.57.22@2x.png" alt="Image Description">
+위의 식의 정수부를 구하여라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2021년 히토쓰바시대학 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.57.50@2x.png" alt="Image Description">
+1000 이하의 소수는 250개 이하임을 보여라.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 2021년 도쿄공업대학 제1문
+!<img src="/images/CleanShot%202025-05-04%20at%2018.59.35@2x.png" alt="Image Description">
+양의 정수에 관한 사건
+(*) 10진법으로 표현했을 때, 어떤 자리에도 숫자 9가 없다.
+를 생각한다. 다음 질문에 답하라.</p>
+</li>
+</ul>
+<p>(1) k를 양의 정수라고 할 때, $10^{k-1}$ 이상, $10^{k}$ 미만에서 사건 *을 만족하는 양의 정수의 개수를 $a_k$라고 하자. 이 때, $a_k$를 $k$에 관한 식으로 표현하라.</p>
+<p>(2) 양의 정수 $n$에 대해 $b_n$ = (위의 식) 이라고 하자. 이 때, 모든 양의 정수 $k$에 대해 다음 부등식이 성립함을 보여라:
+(위의 식)</p>
+<ul>
+<li><input disabled="" type="checkbox"> 도쿄공업대 2019 이과 수학
+!<img src="/images/CleanShot%202025-05-04%20at%2019.03.22@2x.png" alt="Image Description"></li>
+</ul>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.03.38@2x.png" alt="Image Description"></p>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.03.47@2x.png" alt="Image Description"></p>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.03.56@2x.png" alt="Image Description"></p>
+<p>!<img src="/images/CleanShot%202025-05-04%20at%2019.04.05@2x.png" alt="Image Description"></p>
+
+			</div>
+			
+
+<div class="related-posts thin">
+	<h2></h2>
+	<ul>
+	
+	<li><a href="/en/posts/test/">TESTTESTTEST</a></li>
+	
+	</ul>
+</div>
+
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="http://localhost:1313/en/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+   </svg>&nbsp;</span><br><span>Making my Personal Blog</span>
+			</a>
+			<a class="prev-post" href="http://localhost:1313/en/posts/test/">
+				<span class="post-nav-label">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+   </svg></span><br><span>TESTTESTTEST</span>
+			</a>
+		</div>
+		<div id="comments" class="thin"></div>
+	</main>
+<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+<p>
+	&copy; 2025 <a href="http://localhost:1313/">dirac042&#39;s Blog</a>
+	&#183; CHANGE ME FOOTER COPYRIGHT&#183; Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+	&#183; Theme <a href="https://github.com/1bl4z3r/hermit-V2" target="_blank" rel="noopener">Hermit-V2</a></p></footer>
+<script async src="http://localhost:1313/js/bundle.min.c7c384e4d29d192bbac6811ae4660bb01767194a5bea56baca77e8260f93ea16.js" integrity="sha256-x8OE5NKdGSu6xoEa5GYLsBdnGUpb6la6ynfoJg+T6hY=" crossorigin="anonymous"></script><script async src="http://localhost:1313/js/link-share.min.24409a4f6e5537d70ffc55ec8f9192208d718678cb8638585342423020b37f39.js" integrity="sha256-JECaT25VN9cP/FXsj5GSII1xhnjLhjhYU0JCMCCzfzk=" crossorigin="anonymous"></script></body>
+</html>

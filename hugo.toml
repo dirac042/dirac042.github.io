@@ -1,58 +1,141 @@
-baseurl = "https://dirac042.github.io"
-title = "dirac042's blog"
-languageCode = "en-us"
-theme = "hello-friend-ng"
+# THIS IS AN EXAMPLE ON HOW YOU SHOULD CONFIGURE YOUR hugo.toml
+# See this hugo.toml in action at https://github.com/1bl4z3r/hermit-V2/blob/staging/hugo.toml
+# Example Site is Staging branch, acessible at https://github.com/1bl4z3r/hermit-V2/tree/staging
+# To see what each config does, refer to https://1bl4z3r.github.io/hermit-V2/en/posts/explaining-configs/
+# Open Issue or Pull Request at https://github.com/1bl4z3r/hermit-V2
 
-
-[params]
-dateform = "Jan 2, 2006"
-dateformShort = "Jan 2"
-dateformNum = "2006-01-02"
-dateformNumTime = "2006-01-02 15:04"
-
-# Subtitle for home
-homeSubtitle = "cozy place to learn anything"
-
-# Set disableReadOtherPosts to true in order to hide the links to other posts.
-disableReadOtherPosts = false
-
-# Enable sharing buttons, if you like
-enableSharingButtons = true
-
-# Show a global language switcher in the navigation bar
-enableGlobalLanguageMenu = true
-
-# Metadata mostly used in document's head
-description = "My new homepage or blog"
-keywords = "homepage, blog"
-images = [""]
-
-[taxonomies]
-category = "blog"
-tag = "tags"
-series = "series"
+baseURL = "https://dirac042.github.io"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+theme = "hermit-v2"
+#enableRobotsTXT = true ## set to true to enable inbuilt robots.txt
 
 [languages]
 [languages.en]
-title = "Anything can be Learned."
-keywords = ""
-copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-readOtherPosts = "Read other posts"
-
-
+title = "dirac042's Blog"
 [languages.en.params]
-subtitle = "TestTestTestTest"
+homeSubtitle = "Cozy Place to Learn Anything"
+weight = 1
+[languages.kr]
+title = 'dirac의  블로그'
+[languages.kr.params]
+homeSubtitle = "무엇이든 배울 수 있다"
+weight = 2
 
-[languages.en.params.logo]
-logoText = "dirac042"
-logoHomeLink = "/"
-# or
-#
-# path = "/img/your-example-logo.svg"
-# alt = "Your example logo alt text"
+languageCode = "en-us"
 
-# And you can even create generic menu
+# title = "CHANGE ME"
+# enableGitInfo = true
+
+pygmentsCodefences = true
+pygmentsUseClasses = true
+#hasCJKLanguage = true
+
+rssLimit = 10
+
+copyright = "CHANGE ME"
+enableEmoji = true
+
+#[services]
+#  [services.disqus]
+#    shortname = ''
+#  [services.googleAnalytics]
+#    id = ''
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
+
+[params.author]
+name = "dirac042"
+#about = "CHANGE SITE AUTHOR ABOUT"
+
+[blackfriday]
+# hrefTargetBlank = true
+# noreferrerLinks = true
+# nofollowLinks = true
+
+[taxonomies]
+tag = "tags"
+# Categories are disabled by default.
+# category = "categories"
+
+# Enable to get proper Mathjax support
+#[markup]
+#  [markup.goldmark]
+#    [markup.goldmark.extensions]
+#      [markup.goldmark.extensions.passthrough]
+#        enable = true
+#        [markup.goldmark.extensions.passthrough.delimiters]
+#          block = [['\[', '\]'], ['$$', '$$']]
+#          inline = [['\(', '\)']]
+
+
+[params]
+# description = "CHANGE ME SITE DESCRIPTION"
+# images = [""]
+themeColor = "#494f5c"
+accentColor = "#018472"
+
+#homeSubtitle = "CHANGE ME HOME SUBTITLE"
+footerCopyright = "CHANGE ME FOOTER COPYRIGHT"
+# footerHideThemeName = false
+# bgImg = ""
+# gitUrl = "https://github.com/1bl4z3r/hermit-V2/tree/staging"
+
+justifyContent = false
+
+relatedPosts = true
+code_copy_button = true
+
+homeSubtitlePrinter = true
+scrollToTop = true
+global_mathjax = false
+readTime = true
+readTimeSeparator = "CHANGE ME READ TIME"
+# legacyLayout = false
+shareSocial = true
+# googleTagManager = "GTM-XXXXXXXX"
+# tagSymbol = "#"
+# categorySymbol = "⊲"
+# pinned = "Pinned Posts"
+# pinnedSVGname = "pin"
+# listLayout = ["description","tags","categories","legacy"]
+# initialPublish = "Initally Posted on: "
+# human = ["single","posts"]
+# noIndex = false
+# denyRobots = "noindex, nofollow, noarchive"
+# allowRobots = "index, follow"
+# siteNoIndex = false
+# noIndexPages = ["404 Page not found"]
+# usesAnimation = true
+# mathjaxLib = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+# mermaidLib = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
+[params.gallery]
+enable = true
+thumbnail = '300'
+
+[params.dateform]
+LongDate = "Jan 2, 2006"
+ShortDate = "Jan 2"
+NumDateShort = "2006-01-02"
+NumDateLong = "2006-01-02 15:04 -0700"
+
+[[params.socialLinks]]
+name = "github"
+url = "https://github.com/dirac042/"
+
+[menu]
+
 [[menu.main]]
-identifier = "blog"
-name = "Blog"
-url = "/posts"
+name = "Posts"
+url = "posts/"
+weight = 10
+
+[[menu.main]]
+name = "About"
+url = "about-hugo/"
+weight = 20

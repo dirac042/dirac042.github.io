@@ -10,3 +10,7 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/hermit-v2"]
+	path = themes/hermit-v2
+	url = https://github.com/1bl4z3r/hermit-V2
+	branch = main
