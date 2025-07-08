@@ -6,8 +6,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Set paths
-sourceEn="/Users/dirac042/Documents/dirac042/POSTS/en"
-sourceKo="/Users/dirac042/Documents/dirac042/POSTS/ko"
+sourceEn="/Users/dirac042/Documents/dirac042/POSTS/en/"
+sourceKo="/Users/dirac042/Documents/dirac042/POSTS/ko/"
 destEn="/Users/dirac042/Desktop/dirac042/content/en/posts/"
 destKo="/Users/dirac042/Desktop/dirac042/content/ko/posts/"
 
