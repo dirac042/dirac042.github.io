@@ -26,6 +26,8 @@ $iris: #907aa9;
 $highlight-low: #f4ede8;
 $highlight-med: #dfdad9;
 $highlight-high: #cecacd;
+$muted: #9893a5;
+$overlay: #f2e9e1;
 
 // Default Colors and Opacity for Admonition
 $blueberry: #448aff;
@@ -48,7 +50,7 @@ $html-background: $base !default;
 $site-nav-children-border-right: $css-grey !default;
 
 // Posts seperator in list view
-$post-item-border-bottom: $css-grey !default;
+$post-item-border-bottom: $muted !default;
 
 // Pinned posts group seperator in list view
 $pinned-posts-group-border-bottom: $css-grey !default;
@@ -91,10 +93,10 @@ $tableofcontents-scrollbar-thumb-hover: lighten($japanese-indigo, 10%) !default;
 $text: $texts !default;
 
 // Text selection color
-$text-select: $rose !default;
+$text-select: $gold !default;
 
 // Marked text color
-$marked-text: $rose !default;
+$marked-text: $gold !default;
 
 // Link text color on hover
 $a-hover: $rose !default;
