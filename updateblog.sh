@@ -6,8 +6,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Set variables for Obsidian to Hugo copy
-sourcePath="/Users/dirac042/Documents/dirac042/POSTS/"
-destinationPath="/Users/dirac042/Desktop/dirac042/content/"
+sourceEn="/Users/dirac042/Documents/dirac042/POSTS/en"
+sourceKo="/Users/dirac042/Documents/dirac042/POSTS/ko"
+destEn="/Users/dirac042/Desktop/dirac042/content/en/posts/"
+destKo="/Users/dirac042/Desktop/dirac042/content/ko/posts/"
 
 # Set GitHub Repo
 myrepo="dirac042"
@@ -35,18 +37,19 @@ fi
 
 # Step 2: Sync posts from Obsidian to Hugo content folder using rsync
 echo "Syncing posts from Obsidian..."
-
-if [ ! -d "$sourcePath" ]; then
-  echo "Source path does not exist: $sourcePath"
-  exit 1
-fi
-
-if [ ! -d "$destinationPath" ]; then
-  echo "Destination path does not exist: $destinationPath"
-  exit 1
-fi
-
-rsync -av --delete "$sourcePath" "$destinationPath"
+for pair in "$sourceEn:$destEn" "$sourceKo:$destKo"; do
+  src="${pair%%:*}"
+  dst="${pair##*:}"
+  if [ ! -d "$src" ]; then
+    echo "Source path does not exist: $src"
+    exit 1
+  fi
+  if [ ! -d "$dst" ]; then
+    echo "Destination path does not exist: $dst"
+    exit 1
+  fi
+  rsync -av --delete "$src" "$dst"
+done
 
 # Step 3: Process Markdown files with Python script to handle image links
 echo "Processing image links in Markdown files..."
@@ -68,27 +71,38 @@ if ! hugo; then
 fi
 
 # Step 5: Add changes to Git
-echo "Staging changes for Git..."
-if git diff --quiet && git diff --cached --quiet; then
-  echo "No changes to stage."
-else
-  git add .
-fi
 
-# Step 6: Commit changes with a dynamic message
-commit_message="New Blog Post on $(date +'%Y-%m-%d %H:%M:%S')"
+echo "Starting Git Commit and Branch process..."
+# ask Commit message
+read -rp "Commit message: " commit_msg
+
+# generate temporary branch name
+timestamp=$(date +'%Y%m%d-%H%M%S')
+branch_name="test-${timestamp}"
+
+# create and switch to new branch
+git checkout -b "$branch_name"
+
+# Add and Commit
+
+git add .
 if git diff --cached --quiet; then
   echo "No changes to commit."
 else
-  echo "Committing changes..."
-  git commit -m "$commit_message"
+  git commit -m "$commit_msg"
+  echo "Committed to branch $branch_name."
 fi
 
-# Step 7: Push all changes to the main branch
-echo "Deploying to GitHub Master..."
-if ! git push origin master; then
-  echo "Failed to push to master branch."
-  exit 1
-fi
+echo ""
+echo "✅ You are now on branch '$branch_name'."
+echo "👉 Inspect your site locally or test this branch before merging."
 
-echo "All done! Site synced, processed, committed, built, and deployed."
+read -rp "Merge '$branch_name' into 'master' and push? (y/N): " confirm_merge
+if [[ "$confirm_merge" =~ ^[Yy]$ ]]; then
+  git checkout master
+  git merge "$branch_name"
+  git push origin master
+  echo "✅ Merged and pushed to master."
+else
+  echo "❗️ Merge skipped. You're still on branch '$branch_name'."
+fi
