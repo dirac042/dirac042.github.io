@@ -1,7 +1,7 @@
 baseURL = "https://dirac042.github.io"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
-theme = "hermit-dirac042"
+theme = "hermit-v2-dirac042"
 #enableRobotsTXT = true ## set to true to enable inbuilt robots.txt
 
 [languages]
