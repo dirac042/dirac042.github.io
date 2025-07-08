@@ -1,9 +1,3 @@
-# THIS IS AN EXAMPLE ON HOW YOU SHOULD CONFIGURE YOUR hugo.toml
-# See this hugo.toml in action at https://github.com/1bl4z3r/hermit-V2/blob/staging/hugo.toml
-# Example Site is Staging branch, acessible at https://github.com/1bl4z3r/hermit-V2/tree/staging
-# To see what each config does, refer to https://1bl4z3r.github.io/hermit-V2/en/posts/explaining-configs/
-# Open Issue or Pull Request at https://github.com/1bl4z3r/hermit-V2
-
 baseURL = "https://dirac042.github.io"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
@@ -13,16 +7,16 @@ theme = "hermit-v2"
 [languages]
 [languages.en]
 title = "dirac042's Blog"
+languageCode = "en-us"
 [languages.en.params]
 homeSubtitle = "Cozy Place to Learn Anything"
 weight = 1
-[languages.kr]
-title = 'dirac의  블로그'
-[languages.kr.params]
-homeSubtitle = "무엇이든 배울 수 있다"
+[languages.ko]
+languageCode = "ko-kr"
+title = 'dirac042의 서재'
+[languages.ko.params]
+homeSubtitle = "무엇이든 배울 수 있음을 기억하기"
 weight = 2
-
-languageCode = "en-us"
 
 # title = "CHANGE ME"
 # enableGitInfo = true
@@ -33,7 +27,7 @@ pygmentsUseClasses = true
 
 rssLimit = 10
 
-copyright = "CHANGE ME"
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 enableEmoji = true
 
 #[services]
@@ -77,8 +71,8 @@ tag = "tags"
 [params]
 # description = "CHANGE ME SITE DESCRIPTION"
 # images = [""]
-themeColor = "#494f5c"
-accentColor = "#018472"
+themeColor = "#faf4ed"
+accentColor = "#d7827a"
 
 #homeSubtitle = "CHANGE ME HOME SUBTITLE"
 footerCopyright = "CHANGE ME FOOTER COPYRIGHT"
@@ -94,8 +88,8 @@ code_copy_button = true
 homeSubtitlePrinter = true
 scrollToTop = true
 global_mathjax = false
-readTime = true
-readTimeSeparator = "CHANGE ME READ TIME"
+readTime = false
+#readTimeSeparator = "CHANGE ME READ TIME"
 # legacyLayout = false
 shareSocial = true
 # googleTagManager = "GTM-XXXXXXXX"

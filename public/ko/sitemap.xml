@@ -2,52 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/ko/blog/</loc>
+    <loc>https://dirac042.github.io/ko/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/"
+                hreflang="en-us"
+                href="https://dirac042.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="http://localhost:1313/ko/blog/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/ko/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://localhost:1313/ko/series/"
+                hreflang="ko-kr"
+                href="https://dirac042.github.io/ko/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ko/tags/</loc>
+    <loc>https://dirac042.github.io/ko/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
+                hreflang="en-us"
+                href="https://dirac042.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="http://localhost:1313/ko/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/ko/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://localhost:1313/ko/"
+                hreflang="ko-kr"
+                href="https://dirac042.github.io/ko/tags/"
                 />
   </url>
 </urlset>

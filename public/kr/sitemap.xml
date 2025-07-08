@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dirac042.github.io/kr/</loc>
+    <loc>http://localhost:1313/kr/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://dirac042.github.io/en/"
+                hreflang="en-us"
+                href="http://localhost:1313/en/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="https://dirac042.github.io/kr/"
+                hreflang="ko-kr"
+                href="http://localhost:1313/kr/"
                 />
   </url><url>
-    <loc>https://dirac042.github.io/kr/tags/</loc>
+    <loc>http://localhost:1313/kr/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://dirac042.github.io/en/tags/"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="kr"
-                href="https://dirac042.github.io/kr/tags/"
+                hreflang="ko-kr"
+                href="http://localhost:1313/kr/tags/"
                 />
   </url>
 </urlset>

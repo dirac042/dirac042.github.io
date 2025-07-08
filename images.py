@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Paths
-posts_dir = "/Users/dirac042/Desktop/dirac042/content/POSTS"
+posts_dir = "/Users/dirac042/Desktop/dirac042/content/"
 attachments_dir = "/Users/dirac042/Documents/dirac042/Images"
 static_images_dir = "/Users/dirac042/Desktop/dirac042/static/images"
 

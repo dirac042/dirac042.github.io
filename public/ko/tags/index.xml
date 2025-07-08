@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 너는 무엇이든 배울 수 있다.</title>
-    <link>http://localhost:1313/ko/tags/</link>
-    <description>Recent content in Tags on 너는 무엇이든 배울 수 있다.</description>
+    <title>Tags on dirac042의 서재</title>
+    <link>https://dirac042.github.io/ko/tags/</link>
+    <description>Recent content in Tags on dirac042의 서재</description>
     <generator>Hugo</generator>
-    <language>ko</language>
-    <atom:link href="http://localhost:1313/ko/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-kr</language>
+    <atom:link href="https://dirac042.github.io/ko/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
