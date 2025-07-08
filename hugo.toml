@@ -1,4 +1,4 @@
-baseURL = "https://dirac042.github.io"
+baseURL = "https://dirac042.github.io/"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 theme = "hermit-v2-dirac042"
