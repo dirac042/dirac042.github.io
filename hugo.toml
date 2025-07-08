@@ -1,11 +1,8 @@
 baseURL = "https://dirac042.github.io/"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
 theme = "hermit-v2-dirac042"
 #enableRobotsTXT = true ## set to true to enable inbuilt robots.txt
 # settings for multi-language support
-relativeURLs = true
-canonifyURLs = true
 
 [languages]
 [languages.en]
@@ -14,12 +11,6 @@ languageCode = "en-us"
 [languages.en.params]
 homeSubtitle = "Cozy Place to Learn Anything"
 weight = 1
-[languages.ko]
-languageCode = "ko-kr"
-title = 'dirac042의 서재'
-[languages.ko.params]
-homeSubtitle = "무엇이든 배울 수 있음을 기억하기"
-weight = 2
 
 # title = "CHANGE ME"
 # enableGitInfo = true

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Anything can be Learned.</title>
+    <title>Tags on dirac042&#39;s Blog</title>
     <link>https://dirac042.github.io/tags/</link>
-    <description>Recent content in Tags on Anything can be Learned.</description>
+    <description>Recent content in Tags on dirac042&#39;s Blog</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dirac042.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STEM</title>
+      <link>https://dirac042.github.io/tags/stem/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://dirac042.github.io/tags/stem/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog</title>
       <link>https://dirac042.github.io/tags/blog/</link>
@@ -21,20 +27,6 @@
       <link>https://dirac042.github.io/tags/maintenance/</link>
       <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://dirac042.github.io/tags/maintenance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Test1</title>
-      <link>https://dirac042.github.io/tags/test1/</link>
-      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://dirac042.github.io/tags/test1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Test2</title>
-      <link>https://dirac042.github.io/tags/test2/</link>
-      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://dirac042.github.io/tags/test2/</guid>
       <description></description>
     </item>
   </channel>
