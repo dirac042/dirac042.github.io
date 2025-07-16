@@ -16,18 +16,18 @@
 <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#faf4ed">
 
   <meta itemprop="name" content="나만의 블로그 만들기 1. HUGO와 친해지기">
-  <meta itemprop="description" content="0. Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.
+  <meta itemprop="description" content="Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.
 Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)
-1. Blog Pipeline 구현하고자 하는 시스템의 파이프라인은 간단합니다.">
+HUGO 소개">
   <meta itemprop="datePublished" content="2025-07-16T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-07-16T00:00:00+00:00">
-  <meta itemprop="wordCount" content="574">
+  <meta itemprop="wordCount" content="524">
   <meta itemprop="keywords" content="Blog,Coding"><meta property="og:url" content="https://dirac042.github.io/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1.-hugo%EC%99%80-%EC%B9%9C%ED%95%B4%EC%A7%80%EA%B8%B0/">
   <meta property="og:site_name" content="dirac042&#39;s Blog">
   <meta property="og:title" content="나만의 블로그 만들기 1. HUGO와 친해지기">
-  <meta property="og:description" content="0. Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.
+  <meta property="og:description" content="Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.
 Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)
-1. Blog Pipeline 구현하고자 하는 시스템의 파이프라인은 간단합니다.">
+HUGO 소개">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -38,9 +38,9 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="나만의 블로그 만들기 1. HUGO와 친해지기">
-  <meta name="twitter:description" content="0. Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.
+  <meta name="twitter:description" content="Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.
 Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)
-1. Blog Pipeline 구현하고자 하는 시스템의 파이프라인은 간단합니다.">
+HUGO 소개">
 
 <script type="application/ld+json">
 {
@@ -48,10 +48,10 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
     "@type": "BlogPosting",
     "headline": "나만의 블로그 만들기 1. HUGO와 친해지기",
     "name": "나만의 블로그 만들기 1. HUGO와 친해지기",
-    "description": "0. Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.\nGit (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)\n1. Blog Pipeline 구현하고자 하는 시스템의 파이프라인은 간단합니다.\n",
+    "description": "Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.\nGit (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)\nHUGO 소개 ",
     "keywords": ["Blog", "Coding"],
-    "articleBody": "0. Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.\nGit (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)\n1. Blog Pipeline 구현하고자 하는 시스템의 파이프라인은 간단합니다.\n옵시디언을 이용해 내가 생각한 것들을 노트 형식으로 저장합니다. 이 노트들은 마크다운(.md) 형식으로 로컬로 저장됩니다. 만들어진 노트들을 블로그 포스트로 업로드하기 위해 모든 마크다운 파일들을 .html 파일로 변환합니다. 이 때, 옵시디언 노트에 링크된 이미지들을 자동으로 블로그 이미지 폴더에 저장합니다. Github Pages를 이용해 블로그의 틀을 만듭니다. Git을 이용해 로컬 파일을 Github에 업로드하여 자동으로 관리되는 시스템을 구축합니다. 2. HUGO 소개 .md 파일을 자동으로 .html로 만드는 것은 굉장히 힘든 작업입니다. 이 작업을 쉽게 만들기 위해 우리는 정적 웹사이트 생성기 중 하나인 HUGO를 사용합니다.\nHUGO는 .md 포스트들을 .html로 변환하는 일 뿐만 아니라 다양한 블로그 테마를 쉽게 다운로드하여 수정할 수 있게 합니다. 또한 블로그의 Deploy나 기타 작업이 굉장히 빠르고 단순하여 프로그래밍을 모르는 사람들도 나만의 블로그를 쉽게 만들 수 있습니다.\nInstallation Hugo를 직접 다운로드 해봅시다.\n1. Windows (Youtube 참고)\n2. MacOS homebrew 패키지 매니저를 이용해 다운로드 받습니다.\nbrew install hugo 3. Linux 사용하는 Distro의 패키지 매니저를 이용해 다운로드 받습니다. (Linux를 사용하신다면 더 이상의 설명은 필요 없으리라 생각합니다.)\nsudo apt install hugo # Debian sudo pacman install hugo # Arch Create Blog Folder 진행하기 전, HUGO가 제대로 설치되었는지 확인해봅시다.\nhugo version # 버전명이 나오면 정상적으로 설치됨. 이제 우리가 블로그 포스트 등을 저장할 폴더로 shell을 이동해줍니다.\n# 저는 macos를 사용중이며, 저장하기 쉽게 Desktop에 파일을 저장해두었습니다. cd ~/Desktop 이제 HUGO를 이용해 블로그 웹사이트를 만들어봅시다.\n# hugo new site [블로그 이름] hugo new site dirac042 블로그가 생성되었습니다! 이제 파일이 어떤 구조로 이루어져 있는지 확인해봅시다.\ncd dirac042 # 방금 생성한 블로그 이름 ls Blog Folders 생성된 블로그 폴더의 역할을 간략하게 알아봅시다.\narchetypes: 마크다운 타입의 문서에서 읽어오는 기본 틀에 대한 정의파일이 있습니다. content: 제일 중요한 파일이며, 여러분들이 obsidian으로 만드는 문서들이 이 곳으로 .md 형태로 들어갑니다. public: 웹사이트의 중요한 파일들이 이곳에 들어갑니다. static: obsidian에서 첨부된 이미지들이 이곳으로 들어갑니다. themes: hugo에서 설치한 테마들이 이곳으로 들어갑니다. Git Init 블로그의 테마를 설치하기 전에, git의 initialization을 해줘야합니다.\ngit init (이 블로그 포스트는 여러분들이 이미 git의 설정을 완료했다는 가정하에 서술됩니다. 만약 여러분이 git 사용이 처음이시라면, [[git 사용법]]을 읽고 따라해 보시는 것을 권장드립니다.)\n! 주의: 이 커맨드는 현재 shell이 블로그 폴더 안에 들어가있어야 합니다!\npwd # 현재 shell 위치 확인 # ex. ~/Desktop/dirac042 Installing HUGO Themes HUGO Themes에서는 유저들이 HUGO로 만든 다양한 웹사이트 테마를 제공합니다. 이 곳에서 마음에 드는 테마를 다운로드 받으면 곧바로 내 블로그에서 사용할 수 있습니다.\n마음에 드는 테마를 발견했다면 download 아이콘을 눌러봅시다. 대부분의 모드는 github submodule을 이용한 설치를 지원합니다.\n[!note] Github Submodule이란? git에서 제공하는 모듈 중 하나로, 어떤 특정 파일을 git 안에 넣고, 그 파일을 git을 통해 계속 업데이트 시킬 수 있는 방법 중 하나다.\n# 예시 테마: Papermod git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 이렇게 submodule을 이용하면, 테마 제작자가 업데이트를 진행할 때, 쉽게 커맨드 하나로 업데이트 시켜줄 수 있습니다.\ngit submodule update --init --recursive [!warning] 주의: Submodule를 받으면 안 되는 사람들 만약 내가 다운로드 받은 블로그 테마를 수정하고 싶으면, submodule를 이용하는 것을 추천하지 않는다. (나중에 submodule로 받은 파일을 해제하고 다시 넣어야할 수 있음.) 필자는 블로그의 색 테마 수정을 위해 submodule를 해제하는 작업을 거쳤는데, 매우 귀찮은 작업이었다. 이런 사람들은 github 사이트에서 직접 release된 파일을 다운로드 받아 옮겨주거나 (제일 확실함), git으로 clone해서 rm -rf git을 통해 git을 해제하는 방법으로 테마를 다운로드 받아주자.\nDeploy HUGO와 테마까지 모두 받았으면, 이제 테스트를 위해 한번 Deploy를 시켜봅시다. shell이 블로그 폴더에 있는 상태에서 다음의 명령어를 사용하면 됩니다.\nhugo server 그러면 굉장히 빠른 속도로 localhost에서 로컬파일을 이용해 블로그가 만들어집니다. 기본적으로 1313포트에서 생성되므로, http://localhost:1313 에 들어가 자신의 블로그를 확인해보도록 합시다.\n이런 식으로 테마와 블로그가 제대로 나온다면, 축하드립니다! 여러분만의 블로그가 성공적으로 제작되었습니다.\n",
-    "wordCount" : "574",
+    "articleBody": "Preparation 이 블로그 포스트는 다음 패키지를 설치되었다는 가정 하에 작성되었습니다.\nGit (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)\nHUGO 소개 HUGO 메인 페이지\n.md 파일을 자동으로 .html로 만드는 것은 굉장히 힘든 작업입니다. 이 작업을 쉽게 만들기 위해 우리는 정적 웹사이트 생성기 중 하나인 HUGO를 사용합니다.\nHUGO는 .md 포스트들을 .html로 변환하는 일 뿐만 아니라 다양한 블로그 테마를 쉽게 다운로드하여 수정할 수 있게 합니다. 또한 블로그의 Deploy나 기타 작업이 굉장히 빠르고 단순하여 프로그래밍을 모르는 사람들도 나만의 블로그를 쉽게 만들 수 있습니다.\nInstallation Hugo를 직접 다운로드 해봅시다.\n1. Windows (Youtube 참고)\n2. MacOS brew install hugo homebrew 패키지 매니저를 이용해 다운로드 받습니다.\n3. Linux sudo apt install hugo # Debian sudo pacman install hugo # Arch 사용하는 Distro의 패키지 매니저를 이용해 다운로드 받습니다.\n(Linux를 사용하신다면 더 이상의 설명은 필요 없으리라 생각합니다.)\nCreate Blog Folder 진행하기 전, HUGO가 제대로 설치되었는지 확인해봅시다.\nhugo version # 버전명이 나오면 정상적으로 설치됨. 이제 우리가 블로그 포스트 등을 저장할 폴더로 shell을 이동해줍니다.\n# 저는 macos를 사용중이며, 저장하기 쉽게 Desktop에 파일을 저장해두었습니다. cd ~/Desktop 이제 HUGO를 이용해 블로그 웹사이트를 만들어봅시다.\n# hugo new site [블로그 이름] hugo new site dirac042 블로그가 생성되었습니다! 이제 파일이 어떤 구조로 이루어져 있는지 확인해봅시다.\ncd dirac042 # 방금 생성한 블로그 이름 ls Blog Folders 필자의 블로그 폴더\n생성된 블로그 폴더의 역할을 간략하게 알아봅시다.\narchetypes: 마크다운 타입의 문서에서 읽어오는 기본 틀에 대한 정의파일이 있습니다. content: 제일 중요한 파일이며, 여러분들이 obsidian으로 만드는 문서들이 이 곳으로 .md 형태로 들어갑니다. public: 웹사이트의 중요한 파일들이 이곳에 들어갑니다. static: obsidian에서 첨부된 이미지들이 이곳으로 들어갑니다. themes: hugo에서 설치한 테마들이 이곳으로 들어갑니다. Git Init 블로그의 테마를 설치하기 전에, git의 initialization을 해줘야합니다.\ngit init (이 블로그 포스트는 여러분들이 이미 git의 설정을 완료했다는 가정하에 서술됩니다. 만약 여러분이 git 사용이 처음이시라면, [[git 사용법]]을 읽고 따라해 보시는 것을 권장드립니다.)\n!주의: 이 커맨드는 현재 shell이 블로그 폴더 안에 들어가있어야 합니다!\npwd # 현재 shell 위치 확인 # ex. ~/Desktop/dirac042 Installing HUGO Themes HUGO Themes 웹사이트\nHUGO Themes에서는 유저들이 HUGO로 만든 다양한 웹사이트 테마를 제공합니다. 이 곳에서 마음에 드는 테마를 다운로드 받으면 곧바로 내 블로그에서 사용할 수 있습니다.\n마음에 드는 테마를 발견했다면 download 아이콘을 눌러봅시다. 대부분의 모드는 github submodule을 이용한 설치를 지원합니다.\n[!note] Github Submodule이란? git에서 제공하는 모듈 중 하나로, 어떤 특정 파일을 git 안에 넣고, 그 파일을 git을 통해 계속 업데이트 시킬 수 있는 방법 중 하나다.\n# 예시 테마: Papermod git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 이렇게 submodule을 이용하면, 테마 제작자가 업데이트를 진행할 때, 쉽게 커맨드 하나로 업데이트 시켜줄 수 있습니다.\ngit submodule update --init --recursive [!warning] 주의: Submodule를 받으면 안 되는 사람들 만약 내가 다운로드 받은 블로그 테마를 수정하고 싶으면, submodule를 이용하는 것을 추천하지 않는다. (나중에 submodule로 받은 파일을 해제하고 다시 넣어야할 수 있음.) 필자는 블로그의 색 테마 수정을 위해 submodule를 해제하는 작업을 거쳤는데, 매우 귀찮은 작업이었다. 이런 사람들은 github 사이트에서 직접 release된 파일을 다운로드 받아 옮겨주거나 (제일 확실함), git으로 clone해서 rm -rf git을 통해 git을 해제하는 방법으로 테마를 다운로드 받아주자.\nDeploy HUGO와 테마까지 모두 받았으면, 이제 테스트를 위해 한번 Deploy를 시켜봅시다. shell이 블로그 폴더에 있는 상태에서 다음의 명령어를 사용하면 됩니다.\nhugo server 그러면 굉장히 빠른 속도로 localhost에서 로컬파일을 이용해 블로그가 만들어집니다. 기본적으로 1313포트에서 생성되므로, http://localhost:1313 에 들어가 자신의 블로그를 확인해보도록 합시다.\n필자의 블로그 구동 화면 (localhost)\n이런 식으로 테마와 블로그가 제대로 나온다면, 축하드립니다! 여러분만의 블로그가 성공적으로 제작되었습니다.\n",
+    "wordCount" : "524",
     "inLanguage": "en",
     "datePublished": "2025-07-16T00:00:00Z",
     "dateModified": "2025-07-16T00:00:00Z",
@@ -179,7 +179,7 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
       <line x1="16" y1="13" x2="8" y2="13"></line>
       <line x1="16" y1="17" x2="8" y2="17"></line>
       <polyline points="10 9 9 9 8 9"></polyline>
-   </svg>574&nbsp  </p>
+   </svg>524&nbsp  </p>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -190,7 +190,7 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
 </p></div>
 			<hr class="post-end">
 			<div class="content">
-				 <h2 id="0-preparation">0. Preparation<a href="#0-preparation" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+				 <h2 id="preparation">Preparation<a href="#preparation" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
@@ -201,31 +201,21 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
 <li>Go (1.24.5)</li>
 </ul>
 <p>(MacOS에서는 homebrew를 통해 쉽게 설치가 가능합니다.)</p>
-<h2 id="1-blog-pipeline">1. Blog Pipeline<a href="#1-blog-pipeline" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+<h2 id="hugo-소개">HUGO 소개<a href="#hugo-%ec%86%8c%ea%b0%9c" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
    </svg></a></h2>
-<p><img src="../../images/Pasted%20image%2020250716145644.png" alt="Image Description">
-구현하고자 하는 시스템의 파이프라인은 간단합니다.</p>
-<ol>
-<li>옵시디언을 이용해 내가 생각한 것들을 노트 형식으로 저장합니다. 이 노트들은 마크다운(.md) 형식으로 로컬로 저장됩니다.</li>
-<li>만들어진 노트들을 블로그 포스트로 업로드하기 위해 모든 마크다운 파일들을 .html 파일로 변환합니다. 이 때, 옵시디언 노트에 링크된 이미지들을 자동으로 블로그 이미지 폴더에 저장합니다.</li>
-<li>Github Pages를 이용해 블로그의 틀을 만듭니다. Git을 이용해 로컬 파일을 Github에 업로드하여 자동으로 관리되는 시스템을 구축합니다.</li>
-</ol>
-<h2 id="2-hugo-소개">2. HUGO 소개<a href="#2-hugo-%ec%86%8c%ea%b0%9c" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round">
-      <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
-      <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h2>
-<p><img src="../../images/Pasted%20image%2020250716150210.png" alt="Image Description">
-.md 파일을 자동으로 .html로 만드는 것은 굉장히 힘든 작업입니다. 이 작업을 쉽게 만들기 위해 우리는 정적 웹사이트 생성기 중 하나인 HUGO를 사용합니다.</p>
+<p><img src="../../images/Pasted%20image%2020250716150210.png" alt="Image Description"></p>
+<blockquote>
+<p>HUGO 메인 페이지</p></blockquote>
+<p>.md 파일을 자동으로 .html로 만드는 것은 굉장히 힘든 작업입니다. 이 작업을 쉽게 만들기 위해 우리는 정적 웹사이트 생성기 중 하나인 HUGO를 사용합니다.</p>
 <p>HUGO는 .md 포스트들을 .html로 변환하는 일 뿐만 아니라 다양한 블로그 테마를 쉽게 다운로드하여 수정할 수 있게 합니다. 또한 블로그의 Deploy나 기타 작업이 굉장히 빠르고 단순하여 프로그래밍을 모르는 사람들도 나만의 블로그를 쉽게 만들 수 있습니다.</p>
-<h3 id="installation">Installation<a href="#installation" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+<h2 id="installation">Installation<a href="#installation" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h3>
+   </svg></a></h2>
 <p>Hugo를 직접 다운로드 해봅시다.</p>
 <h4 id="1-windows">1. Windows<a href="#1-windows" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
@@ -238,22 +228,22 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
    </svg></a></h4>
-<p>homebrew 패키지 매니저를 이용해 다운로드 받습니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>brew install hugo
-</span></span></code></pre></div><h4 id="3-linux">3. Linux<a href="#3-linux" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+</span></span></code></pre></div><p>homebrew 패키지 매니저를 이용해 다운로드 받습니다.</p>
+<h4 id="3-linux">3. Linux<a href="#3-linux" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
    </svg></a></h4>
-<p>사용하는 Distro의 패키지 매니저를 이용해 다운로드 받습니다.
-(Linux를 사용하신다면 더 이상의 설명은 필요 없으리라 생각합니다.)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt install hugo    <span style="color:#75715e"># Debian</span>
 </span></span><span style="display:flex;"><span>sudo pacman install hugo <span style="color:#75715e"># Arch</span>
-</span></span></code></pre></div><h3 id="create-blog-folder">Create Blog Folder<a href="#create-blog-folder" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+</span></span></code></pre></div><p>사용하는 Distro의 패키지 매니저를 이용해 다운로드 받습니다.</p>
+<p>(Linux를 사용하신다면 더 이상의 설명은 필요 없으리라 생각합니다.)</p>
+<h2 id="create-blog-folder">Create Blog Folder<a href="#create-blog-folder" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h3>
+   </svg></a></h2>
 <p>진행하기 전, HUGO가 제대로 설치되었는지 확인해봅시다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo version <span style="color:#75715e"># 버전명이 나오면 정상적으로 설치됨.</span>
 </span></span></code></pre></div><p>이제 우리가 블로그 포스트 등을 저장할 폴더로 shell을 이동해줍니다.</p>
@@ -265,37 +255,41 @@ Git (2.50.0) Go (1.24.5) (MacOS에서는 homebrew를 통해 쉽게 설치가 가
 </span></span></code></pre></div><p>블로그가 생성되었습니다! 이제 파일이 어떤 구조로 이루어져 있는지 확인해봅시다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd dirac042 <span style="color:#75715e"># 방금 생성한 블로그 이름</span>
 </span></span><span style="display:flex;"><span>ls
-</span></span></code></pre></div><h3 id="blog-folders">Blog Folders<a href="#blog-folders" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+</span></span></code></pre></div><h2 id="blog-folders">Blog Folders<a href="#blog-folders" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h3>
+   </svg></a></h2>
 <p><img src="../../images/Pasted%20image%2020250716151913.png" alt="Image Description"></p>
+<blockquote>
+<p>필자의 블로그 폴더</p></blockquote>
 <p>생성된 블로그 폴더의 역할을 간략하게 알아봅시다.</p>
 <ol>
-<li>archetypes: 마크다운 타입의 문서에서 읽어오는 기본 틀에 대한 정의파일이 있습니다.</li>
-<li>content: 제일 중요한 파일이며, 여러분들이 obsidian으로 만드는 문서들이 이 곳으로 .md 형태로 들어갑니다.</li>
-<li>public: 웹사이트의 중요한 파일들이 이곳에 들어갑니다.</li>
-<li>static: obsidian에서 첨부된 이미지들이 이곳으로 들어갑니다.</li>
-<li>themes: hugo에서 설치한 테마들이 이곳으로 들어갑니다.</li>
+<li><strong>archetypes</strong>: 마크다운 타입의 문서에서 읽어오는 기본 틀에 대한 정의파일이 있습니다.</li>
+<li><strong>content</strong>: 제일 중요한 파일이며, 여러분들이 obsidian으로 만드는 문서들이 이 곳으로 .md 형태로 들어갑니다.</li>
+<li><strong>public</strong>: 웹사이트의 중요한 파일들이 이곳에 들어갑니다.</li>
+<li><strong>static</strong>: obsidian에서 첨부된 이미지들이 이곳으로 들어갑니다.</li>
+<li><strong>themes</strong>: hugo에서 설치한 테마들이 이곳으로 들어갑니다.</li>
 </ol>
-<h3 id="git-init">Git Init<a href="#git-init" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+<h2 id="git-init">Git Init<a href="#git-init" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h3>
+   </svg></a></h2>
 <p>블로그의 테마를 설치하기 전에, git의 initialization을 해줘야합니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git init
 </span></span></code></pre></div><p>(이 블로그 포스트는 여러분들이 이미 git의 설정을 완료했다는 가정하에 서술됩니다. 만약 여러분이 git 사용이 처음이시라면, [[git 사용법]]을 읽고 따라해 보시는 것을 권장드립니다.)</p>
-<p>! 주의: 이 커맨드는 현재 shell이 블로그 폴더 안에 들어가있어야 합니다!</p>
+<p><strong>!주의: 이 커맨드는 현재 shell이 블로그 폴더 안에 들어가있어야 합니다!</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pwd <span style="color:#75715e"># 현재 shell 위치 확인</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># ex. ~/Desktop/dirac042</span>
-</span></span></code></pre></div><h3 id="installing-hugo-themes">Installing HUGO Themes<a href="#installing-hugo-themes" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+</span></span></code></pre></div><h2 id="installing-hugo-themes">Installing HUGO Themes<a href="#installing-hugo-themes" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h3>
+   </svg></a></h2>
 <p><img src="../../images/CleanShot%202025-07-16%20at%2015.35.36@2x.png" alt="Image Description"></p>
+<blockquote>
+<p>HUGO Themes 웹사이트</p></blockquote>
 <p><a href="https://themes.gohugo.io/">HUGO Themes</a>에서는 유저들이 HUGO로 만든 다양한 웹사이트 테마를 제공합니다.
 이 곳에서 마음에 드는 테마를 다운로드 받으면 곧바로 내 블로그에서 사용할 수 있습니다.</p>
 <p>마음에 드는 테마를 발견했다면 download 아이콘을 눌러봅시다.
@@ -312,17 +306,19 @@ git에서 제공하는 모듈 중 하나로, 어떤 특정 파일을 git 안에 
 만약 내가 다운로드 받은 블로그 테마를 수정하고 싶으면, submodule를 이용하는 것을 추천하지 않는다. (나중에 submodule로 받은 파일을 해제하고 다시 넣어야할 수 있음.)
 필자는 블로그의 색 테마 수정을 위해 submodule를 해제하는 작업을 거쳤는데, 매우 귀찮은 작업이었다.
 이런 사람들은 github 사이트에서 직접 release된 파일을 다운로드 받아 옮겨주거나 (제일 확실함), git으로 clone해서 rm -rf git을 통해 git을 해제하는 방법으로 테마를 다운로드 받아주자.</p></blockquote>
-<h3 id="deploy">Deploy<a href="#deploy" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+<h2 id="deploy">Deploy<a href="#deploy" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
-   </svg></a></h3>
+   </svg></a></h2>
 <p>HUGO와 테마까지 모두 받았으면, 이제 테스트를 위해 한번 Deploy를 시켜봅시다.
 shell이 블로그 폴더에 있는 상태에서 다음의 명령어를 사용하면 됩니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo server
 </span></span></code></pre></div><p>그러면 굉장히 빠른 속도로 localhost에서 로컬파일을 이용해 블로그가 만들어집니다.
 기본적으로 1313포트에서 생성되므로, http://localhost:1313 에 들어가 자신의 블로그를 확인해보도록 합시다.</p>
 <p><img src="../../images/CleanShot%202025-07-16%20at%2015.47.55@2x.png" alt="Image Description"></p>
+<blockquote>
+<p>필자의 블로그 구동 화면 (localhost)</p></blockquote>
 <p>이런 식으로 테마와 블로그가 제대로 나온다면, 축하드립니다!
 여러분만의 블로그가 성공적으로 제작되었습니다.</p>
 
