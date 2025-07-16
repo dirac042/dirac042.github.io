@@ -2,28 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dirac042.github.io/posts/unist-stem-program---unist-x-ufl/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
+    <loc>https://dirac042.github.io/tags/blog/</loc>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dirac042.github.io/tags/coding/</loc>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dirac042.github.io/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dirac042.github.io/posts/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dirac042.github.io/tags/stem/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dirac042.github.io/tags/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/tags/blog/</loc>
-    <lastmod>2025-07-07T00:00:00+00:00</lastmod>
+    <loc>https://dirac042.github.io/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-0.-%EB%82%98%EC%9D%98-%EC%83%9D%EA%B0%81%EC%9D%84-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A1%9C-%ED%91%9C%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90/</loc>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dirac042.github.io/tags/maintenance/</loc>
-    <lastmod>2025-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dirac042.github.io/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
-    <lastmod>2025-07-07T00:00:00+00:00</lastmod>
+    <loc>https://dirac042.github.io/posts/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1.-hugo%EC%99%80-%EC%B9%9C%ED%95%B4%EC%A7%80%EA%B8%B0/</loc>
+    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   </url>
 </urlset>
