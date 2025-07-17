@@ -54,15 +54,6 @@ tag = "tags"
 # category = "categories"
 
 # Enable to get proper Mathjax support
-#[markup]
-#  [markup.goldmark]
-#    [markup.goldmark.extensions]
-#      [markup.goldmark.extensions.passthrough]
-#        enable = true
-#        [markup.goldmark.extensions.passthrough.delimiters]
-#          block = [['\[', '\]'], ['$$', '$$']]
-#          inline = [['\(', '\)']]
-
 
 [params]
 # description = "CHANGE ME SITE DESCRIPTION"
@@ -71,7 +62,7 @@ themeColor = "#faf4ed"
 accentColor = "#d7827a"
 
 #homeSubtitle = "CHANGE ME HOME SUBTITLE"
-footerCopyright = "CHANGE ME FOOTER COPYRIGHT"
+#footerCopyright = "CHANGE ME FOOTER COPYRIGHT"
 # footerHideThemeName = false
 # bgImg = ""
 # gitUrl = "https://github.com/1bl4z3r/hermit-V2/tree/staging"
@@ -83,7 +74,7 @@ code_copy_button = true
 
 homeSubtitlePrinter = true
 scrollToTop = true
-global_mathjax = false
+global_mathjax = true
 readTime = false
 #readTimeSeparator = "CHANGE ME READ TIME"
 # legacyLayout = false
@@ -102,7 +93,7 @@ shareSocial = true
 # siteNoIndex = false
 # noIndexPages = ["404 Page not found"]
 # usesAnimation = true
-# mathjaxLib = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+mathjaxLib = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
 # mermaidLib = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
 [params.gallery]
 enable = true
