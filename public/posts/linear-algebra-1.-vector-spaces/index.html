@@ -22,7 +22,7 @@ ex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터
 1. 벡터의 합 (Vector Addition) $$\vec{z} = \vec{x} &#43; \vec{y}$$ 벡터끼리 서로 더할 수 있으며, 주로 평행사변형을 그려 계산합니다.">
   <meta itemprop="datePublished" content="2025-07-17T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-07-17T00:00:00+00:00">
-  <meta itemprop="wordCount" content="795">
+  <meta itemprop="wordCount" content="800">
   <meta itemprop="keywords" content="LinAlg"><meta property="og:url" content="https://dirac042.github.io/posts/linear-algebra-1.-vector-spaces/">
   <meta property="og:site_name" content="dirac042&#39;s Blog">
   <meta property="og:title" content="선형대수학 1강. 벡터 공간">
@@ -52,8 +52,8 @@ ex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터
     "name": "선형대수학 1강. 벡터 공간",
     "description": "벡터 벡터란 크기(Magnitude)와 방향(Direction)이 정의된 값을 말합니다.\nex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터\n모든 벡터는 다음 두 성질을 지닙니다.\n1. 벡터의 합 (Vector Addition) $$\\vec{z} = \\vec{x} + \\vec{y}$$ 벡터끼리 서로 더할 수 있으며, 주로 평행사변형을 그려 계산합니다.\n",
     "keywords": ["LinAlg"],
-    "articleBody": "벡터 벡터란 크기(Magnitude)와 방향(Direction)이 정의된 값을 말합니다.\nex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터\n모든 벡터는 다음 두 성질을 지닙니다.\n1. 벡터의 합 (Vector Addition) $$\\vec{z} = \\vec{x} + \\vec{y}$$ 벡터끼리 서로 더할 수 있으며, 주로 평행사변형을 그려 계산합니다.\n2. 스칼라와 벡터의 곱 (Scalar Multiplication) $$t\\vec{a}=t\\cdot \\vec{a}$$ 벡터는 스칼라와 곱해질 수 있습니다. 이 때, $t$ 가 음수이면 벡터의 방향이 반대가 됩니다.\n벡터(선형) 공간 정의: 장 $F$ 위의 공간 $V$ 가 다음과 같은 성질을 만족할 때, 이를 벡터 공간이라고 합니다.\n$V$ 안의 임의의 원소 $\\vec{x}$, $\\vec{y}$ 가 $\\vec{x} + \\vec{y}$ 가 $V$ 안에 존재한다.\n$V$ 안의 임의의 원소 $\\vec{x}$ 와 $F$ 안의 임의의 원소 $t$ 에 대해 $t\\vec{x}$ 가 $V$ 안에 존재한다.\n(위에서 본 벡터의 두가지 성질과 일치합니다.)\n즉, 우리는 이렇게 다시 말할 수 있습니다.\n벡터 공간이란, 벡터합과 스칼라곱에 대해 닫혀있는 (Closed) 모든 집합을 말한다.\nQ. ‘닫혀있다 (Closed)‘라는건 무슨 뜻일까요?\nA. 어떤 집합에서 임의의 원소를 이용해 계산을 했을 때, 그 계산 결과가 집합 안에 포함되어 있을 때, 이를 ‘닫혀있다’ 라고 표현합니다.\nex. $\\mathbb{R}$ : 실수 전체의 집합이라고 했을 때 모든 $a, b \\in \\mathbb{R}$ 에 대해 $a+b \\in \\mathbb{R}$, 즉 두 수를 더했을 때 그 결과를 $\\mathbb{R}$ 안에서 찾을 수 있습니다.\n이 때, 공간 $\\mathbb{R}$은 $a+b$ 연산(덧셈)에 대해 닫혀있다 라고 합니다.\n벡터 공간에는 다음과 같은 성질이 존재합니다. (복잡해보이지만 매우 간단하고 자명합니다.)\n모든 $x, y \\in V$에 대해 $x+y = y+x$. (덧셈의 교환법칙) 모든 $x, y, z \\in V$에 대해 $(x+y)+z = x+(y+z)$. (덧셈의 결합법칙) $x+\\mathbb{0}=x$를 만족하는 $\\mathbb{0}$이 $V$에 존재. (원소 0) 모든 $x \\in V$에 대해 $x+y = \\mathbb{0}$을 만족하는 $y$가 $V$에 존재. (음수인 원소) 모든 $x\\in V$에 대해 $1x=x$. (1과의 곱셈) 모든 $a, b \\in F$와 $x \\in V$에 대해 $(ab)x=a(bx)$. (곱셈의 결합법칙) 모든 $a \\in F$와 $x, y\\in V$에 대해 $a(x+y) = ax + ay$. (스칼라의 분배법칙) 모든 $a, b \\in F$와 $x \\in V$에 대해 $(a+b)x = ax + bx$. (벡터의 분배법칙) Q. 장 $F$란 무엇인가요?\nA. 수학에서 $F$(Field)란, 연산 가능한 모든 수의 집합을 말합니다. $\\mathbb{R}$라고 생각하셔도 괜찮습니다.\n부가설명: $F$는 ‘모든 스칼라들의 세계’라고 표현할 수 있습니다.\nex. $\\mathbb{R} \\in F$, $\\mathbb{C}\\in F$ (복소수), $\\mathbb{F}_{p}\\in F$ (유한체)\n벡터 공간의 예시 지금부터는 대표적인 벡터 공간들과 그 특징들에 대해 알아보겠습니다.\n사실상 제일 중요한 부분이며, 우리의 목표는 ‘대부분의 문제는 벡터 공간으로 표현 가능하다’ 는 것을 이해하는 것입니다.\nn-tuples (n-튜플) n-tuple이란, n개의 실수가 모여있는 집합을 말합니다.\n$$\\mathbb{R}^n = {x_1,x_2, \\dots,x_n}$$\n이 때, n-tuple은 벡터 공간입니다.\nProof:\n$(x_1, \\dots, x_n) + (y_1, \\dots, y_n) = (x_1+y_1, \\dots , x_n+y_n)$ $c(x_1, \\dots, x_n) = (cx_1, \\dots, cx_n)$\n즉, 덧셈과 스칼라곱에 대해 닫혀있습니다. 우리는 선형대수학을 배우면서 이 n-tuples에 대한 계산을 많이 다루게 될 것입니다.\n특히, 이 n-tuples들은 모든 원소를 가로로 적은 Column Vector의 형태로 표현합니다. $$\\mathbb{R}^n=(x_1, x_2, \\dots,x_n)^T$$\n복소수집합 (Complex Numbers) 모든 복소수 $a+bi$ 가 모인 집합 $\\mathbb{C}$은 벡터공간입니다.\nProof: 1. $(a+bi) + (c+di) = (a+c) + (b+d)i$ 2. $t(a+bi) = at+bti$ 즉, 덧셈과 스칼라곱에 대해 닫혀있습니다.\n여기서 중요한 것은, $\\mathbb{C}$는 특히 $\\mathbb{R}^2$ 위의 벡터 공간이라는 점입니다.\n즉, 모든 복소수는 벡터의 형태로 표현할 수 있습니다. 복소평면(Argand Plane) 은 이 특징에서 시작됩니다.\n다항식 (Polynomials) 최고차가 n차인 다항식 $x$를 변수로 가지는, 최고차가 n차인 다항식의 집합을 $P_n(\\mathbb{R})$이라고 정의합시다. 즉,\n$$P_n({\\mathbb{R}}) = a_nx^n+a_{n-1}x^{n-1}+\\dots+a_1x+a_0$$\n이 때, $P_n(\\mathbb{R})$은 벡터공간입니다. 즉, 덧셈과 스칼라곱에 대해 닫혀있습니다. (증명은 생략하겠습니다. 직접 해보시기 바랍니다.)\n여기서 중요한 점은, $P_n(\\mathbb{R})$는 $\\mathbb{R}^{n+1}$과 동형(Isomorphic) 이라는 것입니다.\n즉, 모든 n차 다항식은 (n+1)차원 벡터라고 생각해도 된다는 뜻입니다.\n(선형대수의 꽃인 행렬을 소개할 때 연립방정식이 나오는 이유가 이 곳에 있습니다.)\nQ. 동형(Isomorphic)이 무엇인가요?\nA. 쉽게 설명하자면, 서로 같은(동) 형태(형)를 가진다는 뜻입니다.\n정확한 정의를 보면 이러합니다:\n어떤 벡터공간 $V$, $W$가 서로 일대일대응이며, 덧셈과 스칼라곱에 대해 닫혀있는 선형변환이 두 공간 사이에 존재할 때, 이 두 공간이 서로 ‘동형’이라고 말합니다.\n즉, $v \\in V$, $w \\in W$, $c\\in \\mathbb{R}$에 대해\n1. $f(v+w)=f(v)+f(w)$, $f(cu)=cf(u)$ (Linear) 2. 서로 Bijection (Surjective + Injective)가 성립\n다음 두 조건이 성립하면 $V$와 $W$는 동형입니다.\n(차수의 상관 없이) 모든 형태의 다항식 최고차에 상관없이 모든 다항식 종류의 집합을 $P(\\mathbb{R})$라고 정의합시다. 즉,\n$$P(\\mathbb{R})=\\bigcup\\limits_{n=0}^{\\infty}P_n(\\mathbb{R})$$ 이 때, $P(\\mathbb{R})$은 벡터공간입니다.\n(물론 $P_n(\\mathbb{R})$ 보다는 사이즈가 훨씬 큰, 무한한 벡터공간(차수가 무한대일 수 있으므로)입니다.)\n함수 위에서는 함수의 굉장히 작은 예시에 불과한 다항식이 벡터공간임을 보였습니다.\n이제는 더욱 더 넓은, $x+\\text{sin}(x)$ 같은 모든 함수를 기준으로 벡터공간인지 확인해봅시다.\n모든 연속함수의 집합 모든 연속함수가 모인 집합을 $C(\\mathbb{R})$라고 정의합시다. 이 때, 이 집합은 벡터공간입니다.\n(증명: 일반화로 증명하는 것은 어렵기에, $x+\\text{sin}(x)$와 같은 예시로 확인해보는 것을 추천드립니다.)\n이 또한 $P(\\mathbb{R})$와 마찬가지로 무한한 벡터공간입니다. (하지만 크기는 더욱 더 큽니다)\n이를 셀 수 있는 무한함 (Countably Infinite) 이라고 표현합니다.\n정의역이 정의된 모든 연속함수의 집합 모든 연속함수의 집합은 벡터공간이므로, 정의역이 특수하게 정의된 연속함수들은 어떨까요?\n예를 들어, $y=x$와 $y=|x|$는 엄연히 다른 함수입니다. 그러나 두 함수의 정의역이 $0 \\lt x \\lt 1$라면, 두 함수는 완전히 동일해집니다.\n정의역이 $a \\lt x \\lt b$으로 주어진 모든 연속함수의 집합을 $C([a, b])$라고 표현합시다.\n이 때, $C([a, b])$는 벡터공간입니다.\n모든 함수의 집합 2번을 통해 우리는 모든 함수 (연속이든 아니든)를 정의할 수 있습니다.\n모든 함수들의 집합을 $\\mathcal{F}(\\mathbb{R}, \\mathbb{R})$ 라고 정의합시다.\n이 집합은 이런 이상한 함수도 들어갈 수 있습니다.\n$$f(x) = 1 \\text{ if }x\\in\\mathbb{Q}\\text{, 0 if }x\\notin\\mathbb{Q}$$\n",
-    "wordCount" : "795",
+    "articleBody": "벡터 벡터란 크기(Magnitude)와 방향(Direction)이 정의된 값을 말합니다.\nex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터\n모든 벡터는 다음 두 성질을 지닙니다.\n1. 벡터의 합 (Vector Addition) $$\\vec{z} = \\vec{x} + \\vec{y}$$ 벡터끼리 서로 더할 수 있으며, 주로 평행사변형을 그려 계산합니다.\n2. 스칼라와 벡터의 곱 (Scalar Multiplication) $$t\\vec{a}=t\\cdot \\vec{a}$$ 벡터는 스칼라와 곱해질 수 있습니다. 이 때, $t$ 가 음수이면 벡터의 방향이 반대가 됩니다.\n벡터(선형) 공간 정의: 장 $F$ 위의 공간 $V$ 가 다음과 같은 성질을 만족할 때, 이를 벡터 공간이라고 합니다.\n$V$ 안의 임의의 원소 $\\vec{x}$, $\\vec{y}$ 가 $\\vec{x} + \\vec{y}$ 가 $V$ 안에 존재한다.\n$V$ 안의 임의의 원소 $\\vec{x}$ 와 $F$ 안의 임의의 원소 $t$ 에 대해 $t\\vec{x}$ 가 $V$ 안에 존재한다.\n(위에서 본 벡터의 두가지 성질과 일치합니다.)\n즉, 우리는 이렇게 다시 말할 수 있습니다.\n벡터 공간이란, 벡터합과 스칼라곱에 대해 닫혀있는 (Closed) 모든 집합을 말한다.\nQ. ‘닫혀있다 (Closed)‘라는건 무슨 뜻일까요?\nA. 어떤 집합에서 임의의 원소를 이용해 계산을 했을 때, 그 계산 결과가 집합 안에 포함되어 있을 때, 이를 ‘닫혀있다’ 라고 표현합니다.\nex. $\\mathbb{R}$ : 실수 전체의 집합이라고 했을 때 모든 $a, b \\in \\mathbb{R}$ 에 대해 $a+b \\in \\mathbb{R}$, 즉 두 수를 더했을 때 그 결과를 $\\mathbb{R}$ 안에서 찾을 수 있습니다.\n이 때, 공간 $\\mathbb{R}$은 $a+b$ 연산(덧셈)에 대해 닫혀있다 라고 합니다.\n벡터 공간에는 다음과 같은 성질이 존재합니다. (복잡해보이지만 매우 간단하고 자명합니다.)\n모든 $x, y \\in V$에 대해 $x+y = y+x$. (덧셈의 교환법칙) 모든 $x, y, z \\in V$에 대해 $(x+y)+z = x+(y+z)$. (덧셈의 결합법칙) $x+\\mathbb{0}=x$를 만족하는 $\\mathbb{0}$이 $V$에 존재. (원소 0) 모든 $x \\in V$에 대해 $x+y = \\mathbb{0}$을 만족하는 $y$가 $V$에 존재. (음수인 원소) 모든 $x\\in V$에 대해 $1x=x$. (1과의 곱셈) 모든 $a, b \\in F$와 $x \\in V$에 대해 $(ab)x=a(bx)$. (곱셈의 결합법칙) 모든 $a \\in F$와 $x, y\\in V$에 대해 $a(x+y) = ax + ay$. (스칼라의 분배법칙) 모든 $a, b \\in F$와 $x \\in V$에 대해 $(a+b)x = ax + bx$. (벡터의 분배법칙) Q. 장 $F$란 무엇인가요?\nA. 수학에서 $F$(Field)란, 연산 가능한 모든 수의 집합을 말합니다. $\\mathbb{R}$라고 생각하셔도 괜찮습니다.\n부가설명: $F$는 ‘모든 스칼라들의 세계’라고 표현할 수 있습니다.\nex. $\\mathbb{R} \\in F$, $\\mathbb{C}\\in F$ (복소수), $\\mathbb{F}_{p}\\in F$ (유한체)\n벡터 공간의 예시 지금부터는 대표적인 벡터 공간들과 그 특징들에 대해 알아보겠습니다.\n사실상 제일 중요한 부분이며, 우리의 목표는 ‘대부분의 문제는 벡터 공간으로 표현 가능하다’ 는 것을 이해하는 것입니다.\nn-tuples (n-튜플) n-tuple이란, n개의 실수가 모여있는 집합을 말합니다.\n$$\\mathbb{R}^n = {x_1,x_2, \\dots,x_n}$$\n이 때, n-tuple은 벡터 공간입니다.\nProof:\n$(x_1, \\dots, x_n) + (y_1, \\dots, y_n) = (x_1+y_1, \\dots , x_n+y_n)$ $c(x_1, \\dots, x_n) = (cx_1, \\dots, cx_n)$\n즉, 덧셈과 스칼라곱에 대해 닫혀있습니다. 우리는 선형대수학을 배우면서 이 n-tuples에 대한 계산을 많이 다루게 될 것입니다.\n특히, 이 n-tuples들은 모든 원소를 가로로 적은 Column Vector의 형태로 표현합니다. $$\\mathbb{R}^n=(x_1, x_2, \\dots,x_n)^T$$\n복소수집합 (Complex Numbers) 모든 복소수 $a+bi$ 가 모인 집합 $\\mathbb{C}$은 벡터공간입니다.\nProof: 1. $(a+bi) + (c+di) = (a+c) + (b+d)i$ 2. $t(a+bi) = at+bti$ 즉, 덧셈과 스칼라곱에 대해 닫혀있습니다.\n여기서 중요한 것은, $\\mathbb{C}$는 특히 $\\mathbb{R}^2$ 위의 벡터 공간이라는 점입니다.\n즉, 모든 복소수는 벡터의 형태로 표현할 수 있습니다. 복소평면(Argand Plane) 은 이 특징에서 시작됩니다.\n다항식 (Polynomials) 1. 최고차가 n차인 다항식 $x$를 변수로 가지는, 최고차가 n차인 다항식의 집합을 $P_n(\\mathbb{R})$이라고 정의합시다. 즉,\n$$P_n({\\mathbb{R}}) = a_nx^n+a_{n-1}x^{n-1}+\\dots+a_1x+a_0$$\n이 때, $P_n(\\mathbb{R})$은 벡터공간입니다. 즉, 덧셈과 스칼라곱에 대해 닫혀있습니다. (증명은 생략하겠습니다. 직접 해보시기 바랍니다.)\n여기서 중요한 점은, $P_n(\\mathbb{R})$는 $\\mathbb{R}^{n+1}$과 동형(Isomorphic) 이라는 것입니다.\n즉, 모든 n차 다항식은 (n+1)차원 벡터라고 생각해도 된다는 뜻입니다.\n(선형대수의 꽃인 행렬을 소개할 때 연립방정식이 나오는 이유가 이 곳에 있습니다.)\nQ. 동형(Isomorphic)이 무엇인가요?\nA. 쉽게 설명하자면, 서로 같은(동) 형태(형)를 가진다는 뜻입니다.\n정확한 정의를 보면 이러합니다:\n어떤 벡터공간 $V$, $W$가 서로 일대일대응이며, 덧셈과 스칼라곱에 대해 닫혀있는 선형변환이 두 공간 사이에 존재할 때, 이 두 공간이 서로 ‘동형’이라고 말합니다.\n즉, $v \\in V$, $w \\in W$, $c\\in \\mathbb{R}$에 대해:\n1. $f(v+w)=f(v)+f(w)$, $f(cu)=cf(u)$ (Linear)\n2. 서로 Bijection (Surjective + Injective)가 성립 다음 두 조건이 성립하면 $V$와 $W$는 동형입니다.\n2. (차수의 상관 없이) 모든 형태의 다항식 최고차에 상관없이 모든 다항식 종류의 집합을 $P(\\mathbb{R})$라고 정의합시다. 즉,\n$$P(\\mathbb{R})=\\bigcup\\limits_{n=0}^{\\infty}P_n(\\mathbb{R})$$ 이 때, $P(\\mathbb{R})$은 벡터공간입니다.\n(물론 $P_n(\\mathbb{R})$ 보다는 사이즈가 훨씬 큰, 무한한 벡터공간(차수가 무한대일 수 있으므로)입니다.)\n함수 위에서는 함수의 굉장히 작은 예시에 불과한 다항식이 벡터공간임을 보였습니다.\n이제는 더욱 더 넓은, $x+\\text{sin}(x)$ 같은 모든 함수를 기준으로 벡터공간인지 확인해봅시다.\n1. 모든 연속함수의 집합 모든 연속함수가 모인 집합을 $C(\\mathbb{R})$라고 정의합시다. 이 때, 이 집합은 벡터공간입니다.\n(증명: 일반화로 증명하는 것은 어렵기에, $x+\\text{sin}(x)$와 같은 예시로 확인해보는 것을 추천드립니다.)\n이 또한 $P(\\mathbb{R})$와 마찬가지로 무한한 벡터공간입니다. (하지만 크기는 더욱 더 큽니다)\n이를 셀 수 있는 무한함 (Countably Infinite) 이라고 표현합니다.\n2. 정의역이 정의된 모든 연속함수의 집합 모든 연속함수의 집합은 벡터공간이므로, 정의역이 특수하게 정의된 연속함수들은 어떨까요?\n예를 들어, $y=x$와 $y=|x|$는 엄연히 다른 함수입니다. 그러나 두 함수의 정의역이 $0 \\lt x \\lt 1$라면, 두 함수는 완전히 동일해집니다.\n정의역이 $a \\lt x \\lt b$으로 주어진 모든 연속함수의 집합을 $C([a, b])$라고 표현합시다.\n이 때, $C([a, b])$는 벡터공간입니다.\n3. 모든 함수의 집합 2번을 통해 우리는 모든 함수 (연속이든 아니든)를 정의할 수 있습니다.\n모든 함수들의 집합을 $\\mathcal{F}(\\mathbb{R}, \\mathbb{R})$ 라고 정의합시다.\n이 집합은 이런 이상한 함수도 들어갈 수 있습니다.\n$$f(x) = 1 \\text{ if }x\\in\\mathbb{Q}\\text{, 0 if }x\\notin\\mathbb{Q}$$\n",
+    "wordCount" : "800",
     "inLanguage": "en",
     "datePublished": "2025-07-17T00:00:00Z",
     "dateModified": "2025-07-17T00:00:00Z",
@@ -181,7 +181,7 @@ ex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터
       <line x1="16" y1="13" x2="8" y2="13"></line>
       <line x1="16" y1="17" x2="8" y2="17"></line>
       <polyline points="10 9 9 9 8 9"></polyline>
-   </svg>795&nbsp  </p>
+   </svg>800&nbsp  </p>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -214,6 +214,7 @@ ex. 왼쪽(Direction)으로 2만큼(Magnitude) 움직였다 = 벡터
    </svg></a></h3>
 <p>$$t\vec{a}=t\cdot \vec{a}$$
 벡터는 스칼라와 곱해질 수 있습니다. 이 때, $t$ 가 음수이면 벡터의 방향이 반대가 됩니다.</p>
+<hr>
 <h2 id="벡터선형-공간">벡터(선형) 공간<a href="#%eb%b2%a1%ed%84%b0%ec%84%a0%ed%98%95-%ea%b3%b5%ea%b0%84" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -252,6 +253,7 @@ ex. $\mathbb{R}$ : 실수 전체의 집합이라고 했을 때 모든 $a, b \in 
 A. 수학에서 $F$(Field)란, <strong>연산 가능한 모든 수의 집합</strong>을 말합니다. $\mathbb{R}$라고 생각하셔도 괜찮습니다.<br>
 부가설명: $F$는 &lsquo;모든 스칼라들의 세계&rsquo;라고 표현할 수 있습니다.<br>
 ex. $\mathbb{R} \in F$, $\mathbb{C}\in F$ (복소수), $\mathbb{F}_{p}\in F$ (유한체)</p></blockquote>
+<hr>
 <h2 id="벡터-공간의-예시">벡터 공간의 예시<a href="#%eb%b2%a1%ed%84%b0-%ea%b3%b5%ea%b0%84%ec%9d%98-%ec%98%88%ec%8b%9c" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -261,6 +263,7 @@ ex. $\mathbb{R} \in F$, $\mathbb{C}\in F$ (복소수), $\mathbb{F}_{p}\in F$ (�
 <p>사실상 제일 중요한 부분이며, 우리의 목표는
 <strong>&lsquo;대부분의 문제는 벡터 공간으로 표현 가능하다&rsquo;</strong>
 는 것을 이해하는 것입니다.</p>
+<hr>
 <h3 id="n-tuples-n-튜플">n-tuples (n-튜플)<a href="#n-tuples-n-%ed%8a%9c%ed%94%8c" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -278,6 +281,7 @@ ex. $\mathbb{R} \in F$, $\mathbb{C}\in F$ (복소수), $\mathbb{F}_{p}\in F$ (�
 <p>우리는 선형대수학을 배우면서 이 n-tuples에 대한 계산을 많이 다루게 될 것입니다.</p>
 <p>특히, 이 n-tuples들은 모든 원소를 가로로 적은 Column Vector의 형태로 표현합니다.
 $$\mathbb{R}^n=(x_1, x_2, \dots,x_n)^T$$</p>
+<hr>
 <h3 id="복소수집합-complex-numbers">복소수집합 (Complex Numbers)<a href="#%eb%b3%b5%ec%86%8c%ec%88%98%ec%a7%91%ed%95%a9-complex-numbers" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -291,14 +295,17 @@ $$\mathbb{R}^n=(x_1, x_2, \dots,x_n)^T$$</p>
 <p>여기서 중요한 것은, <strong>$\mathbb{C}$는 특히 $\mathbb{R}^2$ 위의 벡터 공간</strong>이라는 점입니다.</p>
 <p>즉, 모든 복소수는 벡터의 형태로 표현할 수 있습니다.
 <strong>복소평면(Argand Plane)</strong> 은 이 특징에서 시작됩니다.</p>
+<hr>
 <h3 id="다항식-polynomials">다항식 (Polynomials)<a href="#%eb%8b%a4%ed%95%ad%ec%8b%9d-polynomials" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
       <line x1="8" y1="12" x2="16" y2="12"></line>
    </svg></a></h3>
-<ol>
-<li>최고차가 n차인 다항식</li>
-</ol>
+<h4 id="1-최고차가-n차인-다항식">1. 최고차가 n차인 다항식<a href="#1-%ec%b5%9c%ea%b3%a0%ec%b0%a8%ea%b0%80-n%ec%b0%a8%ec%9d%b8-%eb%8b%a4%ed%95%ad%ec%8b%9d" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+   </svg></a></h4>
 <p>$x$를 변수로 가지는, 최고차가 n차인 다항식의 집합을 $P_n(\mathbb{R})$이라고 정의합시다. 즉,</p>
 <p>$$P_n({\mathbb{R}}) = a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$$</p>
 <p>이 때, <strong>$P_n(\mathbb{R})$은 벡터공간</strong>입니다. 즉, 덧셈과 스칼라곱에 대해 닫혀있습니다.
@@ -311,17 +318,20 @@ $$\mathbb{R}^n=(x_1, x_2, \dots,x_n)^T$$</p>
 A. 쉽게 설명하자면, 서로 같은(동) 형태(형)를 가진다는 뜻입니다.<br>
 정확한 정의를 보면 이러합니다:<br>
 어떤 벡터공간 $V$, $W$가 서로 일대일대응이며, 덧셈과 스칼라곱에 대해 닫혀있는 선형변환이 두 공간 사이에 존재할 때, 이 두 공간이 서로 &lsquo;동형&rsquo;이라고 말합니다.<br>
-즉, $v \in V$, $w \in W$, $c\in \mathbb{R}$에 대해<br>
-1. $f(v+w)=f(v)+f(w)$, $f(cu)=cf(u)$ (Linear)
-2. 서로 Bijection (Surjective + Injective)가 성립<br>
+즉, $v \in V$, $w \in W$, $c\in \mathbb{R}$에 대해:<br>
+1. $f(v+w)=f(v)+f(w)$, $f(cu)=cf(u)$ (Linear)<br>
+2. 서로 Bijection (Surjective + Injective)가 성립  <br>
 다음 두 조건이 성립하면 $V$와 $W$는 동형입니다.</p></blockquote>
-<ol start="2">
-<li>(차수의 상관 없이) 모든 형태의 다항식</li>
-</ol>
+<h4 id="2-차수의-상관-없이-모든-형태의-다항식">2. (차수의 상관 없이) 모든 형태의 다항식<a href="#2-%ec%b0%a8%ec%88%98%ec%9d%98-%ec%83%81%ea%b4%80-%ec%97%86%ec%9d%b4-%eb%aa%a8%eb%93%a0-%ed%98%95%ed%83%9c%ec%9d%98-%eb%8b%a4%ed%95%ad%ec%8b%9d" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+   </svg></a></h4>
 <p>최고차에 상관없이 모든 다항식 종류의 집합을 $P(\mathbb{R})$라고 정의합시다. 즉,</p>
 <p>$$P(\mathbb{R})=\bigcup\limits_{n=0}^{\infty}P_n(\mathbb{R})$$
 이 때, $P(\mathbb{R})$은 벡터공간입니다.</p>
 <p>(물론 $P_n(\mathbb{R})$ 보다는 사이즈가 훨씬 큰, 무한한 벡터공간(차수가 무한대일 수 있으므로)입니다.)</p>
+<hr>
 <h3 id="함수">함수<a href="#%ed%95%a8%ec%88%98" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -329,23 +339,29 @@ A. 쉽게 설명하자면, 서로 같은(동) 형태(형)를 가진다는 뜻입
    </svg></a></h3>
 <p>위에서는 함수의 굉장히 작은 예시에 불과한 다항식이 벡터공간임을 보였습니다.</p>
 <p>이제는 더욱 더 넓은, $x+\text{sin}(x)$ 같은 모든 함수를 기준으로 벡터공간인지 확인해봅시다.</p>
-<ol>
-<li>모든 연속함수의 집합</li>
-</ol>
+<h4 id="1-모든-연속함수의-집합">1. 모든 연속함수의 집합<a href="#1-%eb%aa%a8%eb%93%a0-%ec%97%b0%ec%86%8d%ed%95%a8%ec%88%98%ec%9d%98-%ec%a7%91%ed%95%a9" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+   </svg></a></h4>
 <p>모든 연속함수가 모인 집합을 $C(\mathbb{R})$라고 정의합시다. 이 때, 이 집합은 벡터공간입니다.</p>
 <p>(증명: 일반화로 증명하는 것은 어렵기에, $x+\text{sin}(x)$와 같은 예시로 확인해보는 것을 추천드립니다.)</p>
 <p>이 또한 $P(\mathbb{R})$와 마찬가지로 무한한 벡터공간입니다. (하지만 크기는 더욱 더 큽니다)</p>
 <p>이를 <em>셀 수 있는 무한함 (Countably Infinite)</em> 이라고 표현합니다.</p>
-<ol start="2">
-<li>정의역이 정의된 모든 연속함수의 집합</li>
-</ol>
+<h4 id="2-정의역이-정의된-모든-연속함수의-집합">2. 정의역이 정의된 모든 연속함수의 집합<a href="#2-%ec%a0%95%ec%9d%98%ec%97%ad%ec%9d%b4-%ec%a0%95%ec%9d%98%eb%90%9c-%eb%aa%a8%eb%93%a0-%ec%97%b0%ec%86%8d%ed%95%a8%ec%88%98%ec%9d%98-%ec%a7%91%ed%95%a9" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+   </svg></a></h4>
 <p>모든 연속함수의 집합은 벡터공간이므로, 정의역이 특수하게 정의된 연속함수들은 어떨까요?</p>
 <p>예를 들어, $y=x$와 $y=|x|$는 엄연히 다른 함수입니다. 그러나 두 함수의 정의역이 $0 \lt x \lt 1$라면, 두 함수는 완전히 동일해집니다.</p>
 <p>정의역이 $a \lt x \lt b$으로 주어진 모든 연속함수의 집합을 $C([a, b])$라고 표현합시다.</p>
 <p>이 때, $C([a, b])$는 벡터공간입니다.</p>
-<ol start="3">
-<li>모든 함수의 집합</li>
-</ol>
+<h4 id="3-모든-함수의-집합">3. 모든 함수의 집합<a href="#3-%eb%aa%a8%eb%93%a0-%ed%95%a8%ec%88%98%ec%9d%98-%ec%a7%91%ed%95%a9" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+   </svg></a></h4>
 <p>2번을 통해 우리는 모든 함수 (연속이든 아니든)를 정의할 수 있습니다.</p>
 <p>모든 함수들의 집합을 $\mathcal{F}(\mathbb{R}, \mathbb{R})$ 라고 정의합시다.</p>
 <p>이 집합은 이런 이상한 함수도 들어갈 수 있습니다.</p>
