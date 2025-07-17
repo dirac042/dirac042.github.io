@@ -53,8 +53,6 @@ tag = "tags"
 # Categories are disabled by default.
 # category = "categories"
 
-# Enable to get proper Mathjax support
-
 [params]
 # description = "CHANGE ME SITE DESCRIPTION"
 # images = [""]
