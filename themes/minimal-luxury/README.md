@@ -78,6 +78,10 @@ math: false      # 선택 — 이 페이지에서 MathJax 강제 끄기/켜기 (
 ## 로컬 미리보기
 
 ```sh
-hugo server            # http://localhost:1313
-hugo --gc --minify     # public/ 생성 (GitHub Actions 가 push 시 자동으로 수행)
+hugo server --disableFastRender   # http://localhost:1313  (대시 두 개! `-disableFastRender` 는 `-d isableFastRender` 로 읽힘)
+hugo --gc --minify                # public/ 생성 (GitHub Actions 가 push 시 자동으로 수행)
 ```
+
+`hugo server` 기본값(fast render)은 테마 파일이 바뀌어도 **브라우저에서 보고 있던 페이지만** 다시 렌더합니다.
+그래서 CSS/레이아웃을 고친 뒤 다른 페이지로 넘어가면 옛 버전이 보일 수 있습니다 — 서버를 재시작하거나 위처럼
+`--disableFastRender` 로 띄우면 모든 페이지가 항상 같은 버전으로 나옵니다. GitHub Pages 배포본은 이 문제가 없습니다.

@@ -111,14 +111,26 @@
         setTimeout(function () { root.classList.remove('is-switching'); }, 700);
       });
     });
+    function savedTheme() {
+      try { var v = localStorage.getItem('theme'); return (v === 'dark' || v === 'light') ? v : null; } catch (err) { return null; }
+    }
+    function osTheme() {
+      return (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    }
     // follow the OS if the visitor never chose explicitly
     if (window.matchMedia) {
       matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-        var saved = null;
-        try { saved = localStorage.getItem('theme'); } catch (err) {}
-        if (!saved) applyTheme(e.matches ? 'dark' : 'light');
+        if (!savedTheme()) applyTheme(e.matches ? 'dark' : 'light');
       });
     }
+    // pages restored from the back/forward cache keep their old DOM — re-sync the theme
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) applyTheme(savedTheme() || osTheme());
+    });
+    // keep other open tabs in step
+    window.addEventListener('storage', function (e) {
+      if (e.key === 'theme') applyTheme(savedTheme() || osTheme());
+    });
   }
 
   root.classList.add('js-ready');

@@ -11,3 +11,6 @@ asd/
 .DS_Store
 Thumbs.db
 node_modules/
+
+# per-machine paths for updateblog.py
+updateblog.local.json
