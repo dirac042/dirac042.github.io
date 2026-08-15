@@ -1,0 +1,27 @@
+{{- /* Load MathJax only when the page contains math (set by render-passthrough hook),
+       when the page sets `math: true`, or when site.Params.math.always is true.
+       MathJax v4: inline + display line-breaking keeps long formulas inside narrow screens. */ -}}
+{{- $noop := .WordCount -}}
+{{- $has := or (.Store.Get "hasMath") .Params.math site.Params.math.always -}}
+{{- if and $has (ne .Params.math false) }}
+<script>
+window.MathJax = {
+	tex: {
+		inlineMath: [['\\(', '\\)'], ['$', '$']],
+		displayMath: [['\\[', '\\]'], ['$$', '$$']],
+		processEscapes: true,
+		processEnvironments: true
+	},
+	options: {
+		skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+		ignoreHtmlClass: 'no-math'
+	},
+	output: {
+		displayOverflow: 'linebreak',
+		linebreaks: { inline: true, width: '100%', lineleading: 0.2 }
+	},
+	chtml: { matchFontHeight: true }
+};
+</script>
+<script defer id="MathJax-script" src="{{ site.Params.math.lib | default "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" }}"></script>
+{{- end }}

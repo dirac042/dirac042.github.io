@@ -1,0 +1,62 @@
+{{ define "bodyclass" }}page-list kind-{{ .Kind }}{{ end }}
+
+{{ define "main" }}
+{{- $kind := .Kind -}}
+{{- $label := "" -}}
+{{- if eq $kind "taxonomy" }}{{ $label = "Index" }}
+{{- else if eq $kind "term" }}{{ $label = (.Data.Singular | default "Tag") }}
+{{- else }}{{ $label = site.Params.journalLabel | default "All entries" }}{{ end -}}
+{{- $title := .Title -}}
+{{- if and (eq $kind "section") (eq .Section "posts") (not .File) }}{{ $title = site.Params.journalTitle | default "Journal" }}{{ end -}}
+
+<section class="page-head wrap">
+	<div class="container reveal">
+		<p class="t-label">{{ $label }}</p>
+		<h1 class="t-headline page-title">{{ $title }}</h1>
+		{{- if eq $kind "taxonomy" }}
+		<p class="t-caption">{{ len .Data.Terms }} {{ cond (eq (len .Data.Terms) 1) "tag" "tags" }}</p>
+		{{- else }}
+		{{- $n := len .RegularPagesRecursive }}
+		<p class="t-caption">{{ $n }} {{ cond (eq $n 1) "entry" "entries" }}</p>
+		{{- end }}
+	</div>
+	{{- with .Content }}
+	<div class="prose page-intro reveal">{{ . }}</div>
+	{{- end }}
+</section>
+
+<section class="section-list wrap">
+	<div class="container">
+	{{- if eq $kind "taxonomy" }}
+		{{- /* Tags index: name — count */ -}}
+		<ul class="entries">
+			{{- range $i, $t := .Data.Terms.ByCount }}
+			<li class="entry reveal" style="--i:{{ $i }}">
+				<a href="{{ $t.Page.RelPermalink }}">
+					<span class="entry-date t-caption">{{ printf "%02d" $t.Count }} {{ cond (eq $t.Count 1) "entry" "entries" }}</span>
+					<span class="entry-title"><span>{{ $t.Page.Title }}</span></span>
+					<span class="entry-tags t-caption"></span>
+				</a>
+			</li>
+			{{- end }}
+		</ul>
+	{{- else }}
+		{{- $pages := partial "functions/sorted.html" .RegularPagesRecursive -}}
+		{{- $paginator := .Paginate $pages -}}
+		{{- range $paginator.Pages.GroupByDate "2006" }}
+		<div class="year-group">
+			<p class="t-label year-label reveal">{{ .Key }}</p>
+			{{- partial "entries.html" (dict "pages" (partial "functions/sorted.html" .Pages)) }}
+		</div>
+		{{- end }}
+		{{- if gt $paginator.TotalPages 1 }}
+		<nav class="pager reveal" aria-label="Pagination">
+			{{- if $paginator.HasPrev }}<a class="btn" href="{{ $paginator.Prev.URL }}">Newer</a>{{ else }}<span class="is-empty"></span>{{ end }}
+			<span class="t-caption">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+			{{- if $paginator.HasNext }}<a class="btn" href="{{ $paginator.Next.URL }}">Older</a>{{ else }}<span class="is-empty"></span>{{ end }}
+		</nav>
+		{{- end }}
+	{{- end }}
+	</div>
+</section>
+{{ end }}

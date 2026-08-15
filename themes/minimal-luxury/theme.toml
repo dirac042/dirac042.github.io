@@ -1,0 +1,12 @@
+name = "Minimal Luxury"
+license = "MIT"
+licenselink = "https://github.com/dirac042/dirac042.github.io/blob/master/themes/minimal-luxury/LICENSE"
+description = "A quiet, fashion-house style Hugo theme: warm ivory, ink, hairlines and wide-tracked Jost. Built for dirac042.github.io from the design-pick 'web-minimal-luxury' pack."
+homepage = "https://dirac042.github.io/"
+tags = ["blog", "minimal", "luxury", "editorial", "light", "responsive", "math", "korean"]
+features = ["math (MathJax, auto-loaded)", "callouts", "code copy button", "tags", "scroll reveal"]
+min_version = "0.134.0"
+
+[author]
+name = "dirac042"
+homepage = "https://github.com/dirac042"

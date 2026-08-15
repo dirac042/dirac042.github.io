@@ -1,0 +1,17 @@
+{{- /* Journal index rows. Usage: partial "entries.html" (dict "pages" $pages) */ -}}
+{{- $dateFormat := site.Params.dateFormat | default "January 2, 2006" -}}
+<ul class="entries">
+	{{- range $i, $p := .pages }}
+	<li class="entry reveal" style="--i:{{ $i }}">
+		<a href="{{ $p.RelPermalink }}">
+			<time class="entry-date t-caption" datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format $dateFormat }}</time>
+			<span class="entry-title"><span>{{ $p.Title }}</span></span>
+			<span class="entry-tags t-caption">
+				{{- range $p.Params.tags -}}
+				<span>{{ . }}</span>
+				{{- end -}}
+			</span>
+		</a>
+	</li>
+	{{- end }}
+</ul>

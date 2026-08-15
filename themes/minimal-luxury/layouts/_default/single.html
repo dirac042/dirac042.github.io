@@ -1,0 +1,18 @@
+{{ define "bodyclass" }}page-single{{ end }}
+
+{{ define "main" }}
+<article class="page">
+	<header class="post-header reveal">
+		{{- with .Params.label }}<p class="t-label">{{ . }}</p>{{ end }}
+		<h1 class="post-title">{{ .Title }}</h1>
+		{{- with .Params.subtitle }}<p class="post-subtitle t-caption">{{ . }}</p>{{ end }}
+		<span class="post-rule" aria-hidden="true"></span>
+	</header>
+	<div class="post-body prose reveal">
+		{{ .Content }}
+	</div>
+	<footer class="post-footer">
+		<div class="container"></div>
+	</footer>
+</article>
+{{ end }}

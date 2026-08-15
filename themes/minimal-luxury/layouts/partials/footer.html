@@ -1,0 +1,26 @@
+{{- $wordmark := site.Params.wordmark | default site.Title -}}
+<footer class="site-footer on-ink">
+	<div class="container">
+		<div class="footer-top">
+			<div class="footer-brand">
+				<a class="brand" href="{{ site.Home.RelPermalink }}">{{ $wordmark }}</a>
+				{{- with site.Params.tagline }}<p class="t-caption">{{ . }}</p>{{ end }}
+			</div>
+			<nav class="footer-nav" aria-label="Footer">
+				{{- range site.Menus.main }}
+				<a class="u-line" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+				{{- end }}
+				{{- range site.Params.socialLinks }}
+				<a class="u-line" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+				{{- end }}
+				{{- with site.Home.OutputFormats.Get "RSS" }}
+				<a class="u-line" href="{{ .RelPermalink }}">RSS</a>
+				{{- end }}
+			</nav>
+		</div>
+		<div class="footer-bottom t-caption">
+			<span>&copy; {{ now.Format "2006" }} {{ site.Params.author.name | default $wordmark }}{{ with site.Params.footerNote }} — {{ . | safeHTML }}{{ end }}</span>
+			<span>{{ with site.Params.footerCredit }}{{ . | safeHTML }}{{ else }}Built with <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>{{ end }}</span>
+		</div>
+	</div>
+</footer>

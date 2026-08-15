@@ -1,0 +1,22 @@
+{{- $wordmark := site.Params.wordmark | default site.Title -}}
+{{- $current := .RelPermalink -}}
+<header class="site-header">
+	<a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} — home">{{ $wordmark }}</a>
+	<nav class="site-nav" aria-label="Primary">
+		{{- range site.Menus.main }}
+		{{- $url := .URL | relLangURL -}}
+		{{- $active := and (ne $url "/") (hasPrefix $current $url) }}
+		<a class="t-label u-line{{ if $active }} is-active{{ end }}" href="{{ $url }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+		{{- end }}
+	</nav>
+	<button class="menu-btn t-label" type="button" data-menu-open aria-expanded="false" aria-controls="menu-overlay">Menu</button>
+</header>
+<div class="menu-overlay" id="menu-overlay" data-menu aria-hidden="true">
+	<button class="menu-close t-label" type="button" data-menu-close>Close</button>
+	<nav aria-label="Menu">
+		{{- range site.Menus.main }}
+		<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+		{{- end }}
+	</nav>
+	<p class="menu-foot t-caption">{{ $wordmark }}{{ with site.Params.tagline }} — {{ . }}{{ end }}</p>
+</div>

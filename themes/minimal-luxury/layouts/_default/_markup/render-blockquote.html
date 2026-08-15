@@ -1,0 +1,13 @@
+{{- /* Obsidian / GitHub style callouts (> [!note] Title) become hairline boxes; plain quotes stay quotes. */ -}}
+{{- if eq .Type "alert" -}}
+<aside class="callout callout-{{ .AlertType }}">
+	<p class="callout-title">{{ with .AlertTitle }}{{ . }}{{ else }}{{ .AlertType | title }}{{ end }}</p>
+	<div class="callout-body">
+		{{ .Text }}
+	</div>
+</aside>
+{{- else -}}
+<blockquote>
+	{{ .Text }}
+</blockquote>
+{{- end -}}

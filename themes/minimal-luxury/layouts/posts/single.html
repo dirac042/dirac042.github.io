@@ -1,0 +1,72 @@
+{{ define "bodyclass" }}page-post{{ end }}
+
+{{ define "main" }}
+{{- $dateFormat := site.Params.dateFormat | default "January 2, 2006" -}}
+<article class="post">
+	<header class="post-header reveal">
+		<div class="post-meta t-caption">
+			<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
+			{{- with .Params.tags }}
+			<span class="post-meta-tags">
+				{{- range . -}}
+				<a href="{{ printf "/tags/%s/" (. | urlize) | relLangURL }}">{{ . }}</a>
+				{{- end -}}
+			</span>
+			{{- end }}
+		</div>
+		<h1 class="post-title">{{ .Title }}</h1>
+		{{- with .Params.subtitle }}<p class="post-subtitle t-caption">{{ . }}</p>{{ end }}
+		<span class="post-rule" aria-hidden="true"></span>
+	</header>
+
+	{{- if .Params.toc }}
+	<nav class="post-toc reveal" aria-label="Table of contents">
+		<div class="post-toc-inner">
+			<p class="t-label">Contents</p>
+			{{ .TableOfContents }}
+		</div>
+	</nav>
+	{{- end }}
+
+	<div class="post-body prose reveal">
+		{{ .Content }}
+	</div>
+
+	<footer class="post-footer">
+		<div class="container">
+			<div class="post-end t-caption reveal">
+				<span>
+					{{- with .Params.tags -}}
+					Filed under
+					{{- range . }} <a href="{{ printf "/tags/%s/" (. | urlize) | relLangURL }}">{{ . }}</a>{{ end }}
+					{{- else -}}
+					{{ .Date.Format $dateFormat }}
+					{{- end -}}
+				</span>
+				<span>{{ with site.Params.author.name }}{{ . }}{{ end }}{{ if ne .Lastmod .Date }} — updated {{ .Lastmod.Format $dateFormat }}{{ end }}</span>
+			</div>
+			{{- /* prev/next from the same canonical order as the lists */ -}}
+			{{- $all := partial "functions/sorted.html" (where site.RegularPages "Section" .Section) -}}
+			{{- $idx := -1 -}}
+			{{- range $i, $p := $all }}{{ if eq $p.Permalink $.Permalink }}{{ $idx = $i }}{{ end }}{{ end -}}
+			{{- $newer := "" -}}{{- $older := "" -}}
+			{{- if gt $idx 0 }}{{ $newer = index $all (sub $idx 1) }}{{ end -}}
+			{{- if and (ge $idx 0) (lt (add $idx 1) (len $all)) }}{{ $older = index $all (add $idx 1) }}{{ end -}}
+			<nav class="post-nav reveal" aria-label="Adjacent entries">
+				{{- with $older }}
+				<a href="{{ .RelPermalink }}" rel="prev">
+					<span class="t-caption">Older entry</span>
+					<span class="post-nav-title">{{ .Title }}</span>
+				</a>
+				{{- else }}<span class="is-empty" aria-hidden="true"></span>{{ end }}
+				{{- with $newer }}
+				<a href="{{ .RelPermalink }}" rel="next">
+					<span class="t-caption">Newer entry</span>
+					<span class="post-nav-title">{{ .Title }}</span>
+				</a>
+				{{- else }}<span class="is-empty" aria-hidden="true"></span>{{ end }}
+			</nav>
+		</div>
+	</footer>
+</article>
+{{ end }}

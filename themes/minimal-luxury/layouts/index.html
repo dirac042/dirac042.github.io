@@ -1,0 +1,63 @@
+{{ define "bodyclass" }}page-home{{ end }}
+
+{{ define "main" }}
+{{- $posts := partial "functions/sorted.html" (where site.RegularPages "Section" "posts") -}}
+{{- $hero := site.Params.hero -}}
+{{- $latestCount := site.Params.latestCount | default 5 -}}
+
+<section class="hero{{ with $hero.image }} has-image{{ end }}" aria-label="Introduction">
+	{{- with $hero.image }}
+	<div class="hero-media" aria-hidden="true"><img src="{{ . | relURL }}" alt=""></div>
+	{{- end }}
+	<div class="hero-inner reveal">
+		{{- with $hero.label }}<p class="t-label hero-label">{{ . }}</p>{{ end }}
+		<h1 class="t-headline hero-title">{{ $hero.headline | default site.Params.tagline | default site.Title }}</h1>
+		{{- with $hero.caption }}<p class="t-caption hero-caption">{{ . | safeHTML }}</p>{{ end }}
+	</div>
+	<span class="scroll-line" aria-hidden="true"></span>
+</section>
+
+<section class="section section-journal wrap" aria-labelledby="latest-heading">
+	<div class="container">
+		<header class="section-head reveal">
+			<h2 id="latest-heading" class="t-label">{{ site.Params.latestLabel | default "Latest entries" }}</h2>
+			<span class="t-caption">{{ len $posts }} {{ cond (eq (len $posts) 1) "entry" "entries" }}</span>
+		</header>
+		{{- partial "entries.html" (dict "pages" (first $latestCount $posts)) }}
+		<div class="section-more reveal">
+			<a class="btn" href="{{ "posts/" | relLangURL }}">{{ site.Params.viewAllLabel | default "View all entries" }}</a>
+		</div>
+	</div>
+</section>
+
+{{- with site.Params.statement }}
+{{- if .text }}
+<section class="section-statement on-ink wrap" aria-label="Statement">
+	<div class="container reveal">
+		{{- with .label }}<p class="t-label">{{ . }}</p>{{ end }}
+		<p class="t-headline statement-text">{{ .text | safeHTML }}</p>
+		{{- with .caption }}<p class="t-caption">{{ . | safeHTML }}</p>{{ end }}
+		{{- with .link }}{{ if and .url .text }}<a class="btn" href="{{ .url | relLangURL }}">{{ .text }}</a>{{ end }}{{ end }}
+	</div>
+</section>
+{{- end }}
+{{- end }}
+
+{{- with site.Taxonomies.tags }}
+{{- if gt (len .) 0 }}
+<section class="section section-topics on-white wrap" aria-labelledby="topics-heading">
+	<div class="container">
+		<header class="section-head reveal">
+			<h2 id="topics-heading" class="t-label">{{ site.Params.topicsLabel | default "Topics" }}</h2>
+			<span class="t-caption">{{ len . }} {{ cond (eq (len .) 1) "tag" "tags" }}</span>
+		</header>
+		<ul class="topics reveal">
+			{{- range .ByCount }}
+			<li><a class="u-line" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}<sup>{{ printf "%02d" .Count }}</sup></a></li>
+			{{- end }}
+		</ul>
+	</div>
+</section>
+{{- end }}
+{{- end }}
+{{ end }}

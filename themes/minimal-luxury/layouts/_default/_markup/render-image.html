@@ -1,0 +1,10 @@
+{{- /* Stand-alone images become <figure>; inline images stay <img>. */ -}}
+{{- $src := .Destination | safeURL -}}
+{{- if .IsBlock -}}
+<figure class="post-figure">
+	<img src="{{ $src }}" alt="{{ .PlainText }}" loading="lazy" decoding="async">
+	{{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

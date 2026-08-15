@@ -1,0 +1,7 @@
+{{- /* Math passthrough: normalise delimiters for MathJax and flag the page. */ -}}
+{{- .Page.Store.Set "hasMath" true -}}
+{{- if eq .Type "block" -}}
+<div class="math math-block">\[{{ .Inner }}\]</div>
+{{- else -}}
+<span class="math math-inline">\({{ .Inner }}\)</span>
+{{- end -}}

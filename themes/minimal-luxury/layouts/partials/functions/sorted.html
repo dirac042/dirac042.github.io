@@ -1,0 +1,3 @@
+{{- /* Canonical ordering used everywhere: newest first; same-day entries by title descending
+       (so "…1" sits above "…0"). Stable, so lists, home and prev/next always agree. */ -}}
+{{- return (sort (sort . "Title" "desc") "Date" "desc") -}}

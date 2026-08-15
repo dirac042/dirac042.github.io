@@ -1,0 +1,13 @@
+# Hugo build output & caches (GitHub Actions builds the site — nothing here needs committing)
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Old experiments / stray folders
+isableFastRender/
+asd/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+node_modules/

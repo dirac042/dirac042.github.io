@@ -1,36 +1,23 @@
+# =============================================================================
+# dirac042.github.io — Hugo configuration
+# Theme: minimal-luxury (themes/minimal-luxury) — design pack "web-minimal-luxury"
+# =============================================================================
+
 baseURL = "https://dirac042.github.io/"
-defaultContentLanguage = "en"
-theme = "hermit-v2-dirac042"
-#enableRobotsTXT = true ## set to true to enable inbuilt robots.txt
-# settings for multi-language support
-relativeURLs = true
-canonifyURLs = true
+title = "dirac042"
+languageCode = "ko-kr"
+defaultContentLanguage = "ko"
+hasCJKLanguage = true
+timeZone = "Asia/Seoul"
+theme = "minimal-luxury"
 
-[languages]
-[languages.en]
-title = "dirac042's Blog"
-languageCode = "en-us"
-[languages.en.params]
-homeSubtitle = "Cozy Place to Learn Anything"
-weight = 1
-
-# title = "CHANGE ME"
-# enableGitInfo = true
-
-pygmentsCodefences = true
-pygmentsUseClasses = true
-#hasCJKLanguage = true
-
-rssLimit = 10
-
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+enableRobotsTXT = true
 enableEmoji = true
+rssLimit = 10
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
-#[services]
-#  [services.disqus]
-#    shortname = ''
-#  [services.googleAnalytics]
-#    id = ''
+[pagination]
+pagerSize = 20
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
@@ -38,83 +25,89 @@ lastmod = ["lastmod", ":git", "date", "publishDate"]
 publishDate = ["publishDate", "date"]
 expiryDate = ["expiryDate"]
 
-
-[params.author]
-name = "dirac042"
-#about = "CHANGE SITE AUTHOR ABOUT"
-
-[blackfriday]
-# hrefTargetBlank = true
-# noreferrerLinks = true
-# nofollowLinks = true
-
 [taxonomies]
 tag = "tags"
-# Categories are disabled by default.
-# category = "categories"
 
+# -----------------------------------------------------------------------------
+# Markdown
+# -----------------------------------------------------------------------------
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true                                   # allow raw HTML inside markdown
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false      # standalone images -> <figure>
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]        # keep LaTeX untouched for MathJax
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    noClasses = false                                 # monochrome styling lives in the theme CSS
+    lineNos = false
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+# -----------------------------------------------------------------------------
+# Site parameters
+# -----------------------------------------------------------------------------
 [params]
-# description = "CHANGE ME SITE DESCRIPTION"
-# images = [""]
-themeColor = "#faf4ed"
-accentColor = "#d7827a"
+  wordmark = "dirac042"
+  tagline = "Cozy Place to Learn Anything"
+  description = "dirac042's journal — notes on mathematics, computer science and building things."
+  dateFormat = "January 2, 2006"      # Go time layout
+  latestCount = 5                     # entries shown on the home page
+  footerNote = "CC BY-NC 4.0"
 
-#homeSubtitle = "CHANGE ME HOME SUBTITLE"
-#footerCopyright = "CHANGE ME FOOTER COPYRIGHT"
-# footerHideThemeName = false
-# bgImg = ""
-# gitUrl = "https://github.com/1bl4z3r/hermit-V2/tree/staging"
+  [params.author]
+    name = "dirac042"
 
-justifyContent = false
+  # Home hero (typographic by default; set `image` for a full-bleed photo)
+  [params.hero]
+    label = "Journal — est. 2025"
+    headline = "A cozy place to learn anything"
+    caption = "Notes on mathematics, computer science &amp; building things"
+    # image = "images/hero.jpg"       # relative to /static — full-bleed, desaturated
 
-relatedPosts = true
-code_copy_button = true
+  # Ink-coloured statement band on the home page (leave `text` empty to hide)
+  [params.statement]
+    label = "Why this journal exists"
+    text = "Capture&nbsp;— Organize&nbsp;— Distill&nbsp;— Express"
+    caption = "The fourth step is why these pages exist"
+    [params.statement.link]
+      text = "Read the first entry"
+      url = "posts/나만의-블로그-만들기-0.-나의-생각을-블로그로-표현해보자/"
 
-homeSubtitlePrinter = true
-scrollToTop = true
-global_mathjax = true
-readTime = false
-#readTimeSeparator = "CHANGE ME READ TIME"
-# legacyLayout = false
-shareSocial = true
-# googleTagManager = "GTM-XXXXXXXX"
-# tagSymbol = "#"
-# categorySymbol = "⊲"
-# pinned = "Pinned Posts"
-# pinnedSVGname = "pin"
-# listLayout = ["description","tags","categories","legacy"]
-# initialPublish = "Initally Posted on: "
-# human = ["single","posts"]
-# noIndex = false
-# denyRobots = "noindex, nofollow, noarchive"
-# allowRobots = "index, follow"
-# siteNoIndex = false
-# noIndexPages = ["404 Page not found"]
-# usesAnimation = true
-mathjaxLib = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-# mermaidLib = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
-[params.gallery]
-enable = true
-thumbnail = '300'
+  # Math: MathJax loads automatically on pages that contain LaTeX
+  [params.math]
+    always = false
+    lib = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
 
-[params.dateform]
-LongDate = "Jan 2, 2006"
-ShortDate = "Jan 2"
-NumDateShort = "2006-01-02"
-NumDateLong = "2006-01-02 15:04 -0700"
+  [[params.socialLinks]]
+    name = "GitHub"
+    url = "https://github.com/dirac042/"
 
-[[params.socialLinks]]
-name = "github"
-url = "https://github.com/dirac042/"
-
+# -----------------------------------------------------------------------------
+# Menu
+# -----------------------------------------------------------------------------
 [menu]
-
-[[menu.main]]
-name = "Posts"
-url = "posts/"
-weight = 10
-
-[[menu.main]]
-name = "About"
-url = "about-hugo/"
-weight = 20
+  [[menu.main]]
+    name = "Journal"
+    url = "posts/"
+    weight = 10
+  [[menu.main]]
+    name = "Tags"
+    url = "tags/"
+    weight = 20
+  [[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 30
