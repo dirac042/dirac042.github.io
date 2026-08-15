@@ -28,6 +28,7 @@ tags:
 ### Analysis
 * [ ] Analysis 1, 2 by Terence Tao
 * [ ] Analysis by Apostol
+* [ ] The "Baby Rudin"
 
 ### Set Theory
 * [ ] Naive Set Theory by Halmos
@@ -63,3 +64,8 @@ tags:
 
 ### Others
 * [ ] *Artificial Intelligence: A Modern Approach* by Stuart Russel
+
+## Nice Materials
+
+[Scholarpedia](http://www.scholarpedia.org/article/Main_Page): 수학 관련 위키. Random Article만 훑어봐도 얼마나 방대한지 보임.
+

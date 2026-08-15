@@ -4,7 +4,8 @@
 updateblog.py — Obsidian 노트 → Hugo 블로그 동기화 & 배포 (macOS / Windows 공용)
 
 예전 updateblog.sh + images.py 를 하나로 합친 것입니다. 파이썬 3 표준 라이브러리만 사용하며
-rsync 가 필요 없습니다.
+rsync 가 필요 없습니다. Obsidian 이미지 임베드([[img.png]])는 마크다운 이미지로, 노트 간 링크([[노트]])는
+공개된 글이면 블로그 링크로, 아니면 글자만 남도록 변환합니다.
 
     python updateblog.py              동기화 → 이미지 처리 → hugo 빌드 검사 → test 브랜치 커밋 → (선택) master merge + push
     python updateblog.py --serve      동기화 → 이미지 처리 → hugo server --disableFastRender -D  (git 단계 없음)
@@ -64,6 +65,33 @@ EMBED_RE = re.compile(
 )
 # 이미 변환된 마크다운 이미지 링크:  ![...](/images/파일%20이름.png)
 MD_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(/images/([^)\s]+)\)")
+# 노트 간 위키링크:  [[노트 이름]]  [[노트 이름|표시 글자]]  [[노트 이름#섹션]]
+NOTE_LINK_RE = re.compile(r"(?<!!)\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]")
+FRONT_MATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.S)
+
+
+def hugo_urlize(name: str) -> str:
+    """Hugo 가 파일 이름으로 URL 조각을 만드는 규칙의 근사치 (소문자, 공백→'-', 특수문자 제거)."""
+    s = re.sub(r"\s+", "-", name.strip().lower())
+    return re.sub(r"[^\w.\-~+@#/]", "", s)
+
+
+def note_index(posts_dir: Path):
+    """POSTS 안의 노트 → {이름: (url, draft)}. slug 프런트매터가 있으면 그것을, 없으면 파일 이름을 URL 로 씁니다."""
+    idx = {}
+    for md in posts_dir.rglob("*.md"):
+        text = md.read_text("utf-8")
+        slug, draft = None, False
+        m = FRONT_MATTER_RE.match(text)
+        if m:
+            fm = m.group(1)
+            ms = re.search(r"^slug:\s*['\"]?([^'\"\n]+)['\"]?\s*$", fm, re.M)
+            if ms:
+                slug = ms.group(1).strip()
+            md_ = re.search(r"^draft:\s*(true|false)\s*$", fm, re.M | re.I)
+            draft = bool(md_ and md_.group(1).lower() == "true")
+        idx[md.stem] = (f"/posts/{slug or hugo_urlize(md.stem)}/", draft)
+    return idx
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -216,9 +244,10 @@ def find_image(name: str, images_dir: Path):
 
 
 def process_images(posts_dir: Path, images_dir: Path, dry_run=False):
-    step("이미지 링크 변환 및 복사")
+    step("이미지·노트 링크 변환 및 이미지 복사")
     STATIC_IMAGES.mkdir(parents=True, exist_ok=True)
     converted, copied, missing = 0, [], []
+    notes = note_index(posts_dir)
 
     for md in sorted(posts_dir.rglob("*.md")):
         text = md.read_text("utf-8")
@@ -234,11 +263,32 @@ def process_images(posts_dir: Path, images_dir: Path, dry_run=False):
         for m in MD_IMAGE_RE.finditer(new_text):
             needed.append(m.group(1).replace("%20", " "))
 
+        # 노트 간 위키링크: 공개된 노트면 블로그 링크로, 아니면 글자만 남김
+        links_changed = 0
+
+        def to_link(m):
+            nonlocal links_changed
+            name = m.group(1).strip()
+            label = (m.group(2) or name).strip()
+            links_changed += 1
+            hit = notes.get(name)
+            if hit and not hit[1]:
+                return f"[{label}]({hit[0]})"
+            return label
+
+        new_text = NOTE_LINK_RE.sub(to_link, new_text)
+
         if new_text != text:
             converted += len(needed)
             if not dry_run:
                 md.write_text(new_text, "utf-8")
-            say(f"  ✎ {md.relative_to(posts_dir)}: 임베드 {len(EMBED_RE.findall(text))}개 변환")
+            n_embed = len(EMBED_RE.findall(text))
+            parts = []
+            if n_embed:
+                parts.append(f"이미지 임베드 {n_embed}개")
+            if links_changed:
+                parts.append(f"노트 링크 {links_changed}개")
+            say(f"  ✎ {md.relative_to(posts_dir)}: {', '.join(parts) or '변경'} 변환")
 
         for name in dict.fromkeys(needed):               # 중복 제거, 순서 유지
             dst = STATIC_IMAGES / name

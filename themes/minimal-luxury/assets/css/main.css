@@ -397,7 +397,9 @@ html[data-theme='dark'] .theme-toggle .icon-moon { display: none; }
   gap: 0.5rem;
   padding: 1.875rem 0 2rem;
 }
-.entry-date, .entry-tags { white-space: nowrap; }
+.entry-date { white-space: nowrap; }
+.entry-tags { white-space: normal; }
+.entry-tags span { white-space: nowrap; }
 .entry-title {
   font-size: 1.02rem;
   font-weight: 300;
@@ -424,7 +426,7 @@ html[data-theme='dark'] .theme-toggle .icon-moon { display: none; }
 
 @media (min-width: 768px) {
   .entry a {
-    grid-template-columns: 10rem 1fr 15rem;
+    grid-template-columns: 10rem minmax(0, 1fr) minmax(12rem, 16rem);
     gap: 2.5rem;
     align-items: baseline;
     padding: 2.25rem 0;
