@@ -15,6 +15,8 @@
 <meta name="description" content="{{ $desc }}">
 <meta name="author" content="{{ site.Params.author.name | default "dirac042" }}">
 <meta name="theme-color" content="#f4f1ea">
+{{- /* Theme (light/dark) is applied before first paint: saved choice → OS preference → light */ -}}
+<script>(function(){try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute('content',t==='dark'?'#1a1a18':'#f4f1ea')}}catch(e){}})();</script>
 <link rel="canonical" href="{{ .Permalink }}">
 {{- range .AlternativeOutputFormats }}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $siteTitle }}">

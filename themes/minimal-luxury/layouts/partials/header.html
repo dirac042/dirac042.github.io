@@ -2,14 +2,22 @@
 {{- $current := .RelPermalink -}}
 <header class="site-header">
 	<a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} — home">{{ $wordmark }}</a>
-	<nav class="site-nav" aria-label="Primary">
-		{{- range site.Menus.main }}
-		{{- $url := .URL | relLangURL -}}
-		{{- $active := and (ne $url "/") (hasPrefix $current $url) }}
-		<a class="t-label u-line{{ if $active }} is-active{{ end }}" href="{{ $url }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+	<div class="site-actions">
+		<nav class="site-nav" aria-label="Primary">
+			{{- range site.Menus.main }}
+			{{- $url := .URL | relLangURL -}}
+			{{- $active := and (ne $url "/") (hasPrefix $current $url) }}
+			<a class="t-label u-line{{ if $active }} is-active{{ end }}" href="{{ $url }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+			{{- end }}
+		</nav>
+		{{- if ne site.Params.darkModeToggle false }}
+		<button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Light / dark">
+			<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+			<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"/></svg>
+		</button>
 		{{- end }}
-	</nav>
-	<button class="menu-btn t-label" type="button" data-menu-open aria-expanded="false" aria-controls="menu-overlay">Menu</button>
+		<button class="menu-btn t-label" type="button" data-menu-open aria-expanded="false" aria-controls="menu-overlay">Menu</button>
+	</div>
 </header>
 <div class="menu-overlay" id="menu-overlay" data-menu aria-hidden="true">
 	<button class="menu-close t-label" type="button" data-menu-close>Close</button>

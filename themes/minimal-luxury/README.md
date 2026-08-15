@@ -11,7 +11,10 @@ Sass·npm 등 빌드 도구 없이 순수 CSS/JS 하나씩으로만 이루어져
 | 서체 | Jost(라틴, Google Fonts) + Pretendard Variable(한글, jsDelivr) — 단일 위계, weight 300 본문 |
 | 타이포 | 헤드라인 `clamp(1.5rem,3.2vw,2.6rem)` / 자간 0.22em / 대문자, 라벨 0.7rem·0.32em, 캡션 0.65rem·0.28em |
 | 형태 | radius 0, 그림자 없음, 그라디언트 없음, 1px 헤어라인만 |
-| 모션 | `600ms cubic-bezier(.22,1,.36,1)`, 스크롤 진입 opacity/translateY(16px) 700ms, 링크 밑줄 좌→우 400ms |
+| 모션 | `600ms cubic-bezier(.22,1,.36,1)`, 스크롤 진입 opacity/translateY 700ms, 링크 밑줄 좌→우 400ms |
+| 크기 | 모든 글자·간격·UI가 rem 단위 — `main.css` 맨 위 `html { font-size: 140% }`(데스크탑) / `128%`(모바일) 한 줄이 전체 확대 배율입니다 |
+| 이미지 | 본문 이미지는 읽기 폭 안에, 높이는 화면의 절반(`--img-max-h: 50vh`) 이하로 자동 축소 |
+| 다크 모드 | 헤더 오른쪽 달/해 아이콘(1px 선) 클릭 — 먹빛 캔버스에 아이보리 글자로 반전, 선택은 localStorage 에 저장되고 첫 방문은 OS 설정을 따름 |
 
 ## 폴더
 
@@ -51,6 +54,8 @@ themes/minimal-luxury/
   [params.math]
     always = false                             # true 면 모든 페이지에 MathJax 로드
     lib = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+
+  # darkModeToggle = false                     # 헤더의 달/해 버튼 숨기기
 ```
 
 ## 글 프런트매터
