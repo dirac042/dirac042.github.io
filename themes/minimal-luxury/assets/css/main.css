@@ -534,17 +534,26 @@ html[data-theme='dark'] .theme-toggle .icon-moon { display: none; }
   padding: clamp(4rem, 8vw, 6rem) var(--pad) 0;
 }
 .post-toc {
-  max-width: var(--measure);
-  margin: clamp(3.5rem, 7vw, 5rem) auto 0;
+  max-width: calc(var(--measure) + 2 * var(--pad));
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
   padding: 0 var(--pad);
 }
-.post-toc-inner { border-top: 1px solid var(--c-hair); border-bottom: 1px solid var(--c-hair); padding: 1.5rem 0; }
-.post-toc .t-label { color: var(--c-muted); margin-bottom: 0.75rem; }
-.post-toc ul { list-style: none; }
-.post-toc ul ul { padding-left: 1.5rem; }
-.post-toc li { font-size: 0.8rem; letter-spacing: 0.1em; line-height: 2.2; }
+.post-toc-inner { border-top: 1px solid var(--c-hair); border-bottom: 1px solid var(--c-hair); padding: 1.5rem 0 1.625rem; }
+.post-toc .t-label { color: var(--c-muted); margin-bottom: 0.875rem; }
+.post-toc ul { list-style: none; counter-reset: toc; }
+.post-toc ul ul { padding-left: 1.75rem; margin-top: 0.15rem; counter-reset: toc2; }
+.post-toc li { font-size: 0.85rem; letter-spacing: 0.06em; line-height: 2.1; position: relative; }
+.post-toc > .post-toc-inner > nav > ul > li { padding-left: 2rem; counter-increment: toc; }
+.post-toc > .post-toc-inner > nav > ul > li::before {
+  content: counter(toc, decimal-leading-zero);
+  position: absolute; left: 0; top: 0;
+  font-size: 0.65rem; letter-spacing: 0.12em; line-height: 2.75; color: var(--c-muted);
+}
+.post-toc ul ul li { padding-left: 1.25rem; }
+.post-toc ul ul li::before { content: ''; position: absolute; left: 0; top: 0.95em; width: 0.6rem; height: 1px; background: var(--c-hair); }
 .post-toc a { border-bottom: 1px solid transparent; transition: border-color 400ms var(--ease); }
 .post-toc a:hover { border-color: currentColor; }
+.prose h2, .prose h3, .prose h4 { scroll-margin-top: 1.5rem; }
 
 .post-footer { padding: var(--gap-section) var(--pad) 0; }
 .post-end {

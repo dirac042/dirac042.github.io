@@ -19,11 +19,14 @@
 		<span class="post-rule" aria-hidden="true"></span>
 	</header>
 
-	{{- if .Params.toc }}
+	{{- /* Table of contents: shown on every post that has at least two headings (disable with `toc: false`) */ -}}
+	{{- $toc := .TableOfContents -}}
+	{{- $n := len (findRE `<li` $toc) -}}
+	{{- if and (ne .Params.toc false) (or .Params.toc (ge $n 2)) (gt $n 0) }}
 	<nav class="post-toc reveal" aria-label="Table of contents">
 		<div class="post-toc-inner">
 			<p class="t-label">Contents</p>
-			{{ .TableOfContents }}
+			{{ $toc }}
 		</div>
 	</nav>
 	{{- end }}

@@ -35,6 +35,7 @@ tag = "tags"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true                                   # allow raw HTML inside markdown
+      hardWraps = true                                # Obsidian처럼 줄바꿈 하나가 <br> 이 되도록
     [markup.goldmark.parser]
       wrapStandAloneImageWithinParagraph = false      # standalone images -> <figure>
       [markup.goldmark.parser.attribute]
